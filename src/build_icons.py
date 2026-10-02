@@ -9,7 +9,9 @@ Two kinds of icon go in:
   candy has no version of, drawn onto a grid of cells.  Each cell's colour is
   moved onto the nearest of the wallpaper's ramps (palette.py), so candy's
   variety of colours survives but blues go violet, greens and cyans go sky
-  blue, and everything warm lands on the sunset.  Then the theme's hard shadow.
+  blue, and everything warm lands on the sunset.  Candy draws in lines, so
+  what an icon's outline encloses is filled with a dark shade of the line's
+  ramp and the line stays bright on it (see body).  Then the hard shadow.
 
 Each icon is drawn twice: 24 cells across for 24 px and up, 16 across for 16
 and 22 px.  They are written as SVG -- one path per colour, every cell a
@@ -52,6 +54,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+from scipy import ndimage
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import icons_art as A  # noqa: E402
@@ -159,14 +162,58 @@ def load(path, px=768):
     return np.asarray(img, dtype=np.float64) / 255
 
 
+# Gaps an outline may have and still count as closed, as a share of the icon's
+# size: candy leaves its frames open at a corner or a side.
+FILL_GAP = 0.09
+FILL_RES = 192
+
+
+def disk(r):
+    y, x = np.ogrid[-r:r + 1, -r:r + 1]
+    return x * x + y * y <= r * r
+
+
+def body(crop):
+    """The inside of an outline icon: what its strokes enclose once gaps up to
+    FILL_GAP are bridged, less the strokes themselves; and, everywhere, the
+    colour of the nearest stroke, which the inside is filled in a shade of.
+    Candy draws nearly everything as a line, which pixelated is a thin hollow
+    ring; filled, it reads as a solid object at 16 and 24 px."""
+    h, w = crop.shape[:2]
+    s = FILL_RES / max(h, w)
+    sw, sh = max(1, round(w * s)), max(1, round(h * s))
+    small = np.asarray(Image.fromarray(crop[..., 3].astype(np.float32), "F").resize((sw, sh), Image.BOX))
+    ink = small > 0.3
+    r = max(1, round(FILL_GAP * FILL_RES / 2))
+    pad = np.pad(ink, r + 1)
+    closed = ndimage.binary_closing(pad, structure=disk(r))[r + 1:-r - 1, r + 1:-r - 1]
+    inside = ndimage.binary_fill_holes(closed | ink)
+    # Frames open along a whole side, like a terminal's [>_ : a point with
+    # line on three of its four sides is inside too.
+    sides = (np.maximum.accumulate(ink, axis=0).astype(int)
+             + np.maximum.accumulate(ink[::-1], axis=0)[::-1]
+             + np.maximum.accumulate(ink, axis=1)
+             + np.maximum.accumulate(ink[:, ::-1], axis=1)[:, ::-1])
+    inside = (inside | (sides >= 3)) & ~ink
+    inside = ndimage.binary_opening(inside, structure=disk(2))
+    # The nearest stroke's colour, from the full-size icon's colours.
+    rgb = np.stack([np.asarray(Image.fromarray((crop[..., c] * crop[..., 3]).astype(np.float32), "F")
+                               .resize((sw, sh), Image.BOX)) for c in range(3)], -1)
+    rgb = rgb / np.maximum(small[..., None], 1e-6)
+    _, (iy, ix) = ndimage.distance_transform_edt(~ink, return_indices=True)
+    near = np.clip(rgb[iy, ix], 0, 1)
+    return inside.astype(np.float32), near.astype(np.float32)
+
+
 def to_cells(arr, n, room):
     """Average the icon's content onto an n-cell grid: how much of each cell it
-    covers, and its colour there.  The content is scaled to fit `room` cells
-    and centred together with the cell of shadow it will get."""
+    covers, and its colour there; and the same for the inside its outline
+    encloses (see body).  The content is scaled to fit `room` cells and
+    centred together with the cell of shadow it will get."""
     a = arr[..., 3]
     ys, xs = np.nonzero(a > 0.02)
     if len(ys) == 0:
-        return None, None
+        return None, None, None, None
     crop = arr[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
     bh, bw = crop.shape[:2]
     s = room / max(bw, bh)
@@ -177,12 +224,17 @@ def to_cells(arr, n, room):
     cover = box(crop[..., 3])
     colour = np.stack([box(crop[..., c] * crop[..., 3]) for c in range(3)], -1)
     colour = np.clip(colour / np.maximum(cover[..., None], 1e-6), 0, 1)
-    C = np.zeros((n, n))
-    RGB = np.zeros((n, n, 3))
+    inside, near = body(crop)
+    fill = box(inside)
+    fill_rgb = np.stack([box(near[..., c]) for c in range(3)], -1)
+    C, F = np.zeros((n, n)), np.zeros((n, n))
+    RGB, FRGB = np.zeros((n, n, 3)), np.zeros((n, n, 3))
     ox, oy = (n - wc - 1) // 2, (n - hc - 1) // 2
     C[oy:oy + hc, ox:ox + wc] = cover
     RGB[oy:oy + hc, ox:ox + wc] = colour
-    return C, RGB
+    F[oy:oy + hc, ox:ox + wc] = fill
+    FRGB[oy:oy + hc, ox:ox + wc] = fill_rgb
+    return C, RGB, F, FRGB
 
 
 def family(r, g, b):
@@ -203,14 +255,31 @@ def family(r, g, b):
     return "sky"
 
 
-def recolour(C, RGB, n):
+# The ramp shade an icon's inside is filled with: dark enough that the line
+# work, two or three shades up, stays the drawing.  The warm ramps start a
+# shade brighter than the others.
+FILL_SHADE = {"orange": 0, "gold": 0}
+INNER_THRESHOLD = 0.28
+
+
+def recolour(C, RGB, F, FRGB, n):
     """Each covered cell to the nearest wallpaper ramp, at the shade its
     brightness picks, dithered between shades the way the wallpaper is; the
-    ramp's darkest shade is kept for outlines and never used for a fill."""
-    on = C >= THRESHOLD[n]
+    ramp's darkest shade is kept for outlines and never used for a fill.
+    Cells the outline encloses get a flat, darker shade of the ramp of the
+    line around them."""
+    # Over the fill a line needs less of a cell to be drawn, so that the thin
+    # details inside an icon -- a terminal's prompt, a page's lines -- show.
+    on = (C >= THRESHOLD[n]) | ((C >= INNER_THRESHOLD) & (C + F >= 0.75))
+    inside = ~on & (C + F >= 0.5)
+    inside |= ndimage.binary_fill_holes(on | inside) & ~on
     grid = A.blank(n)
     for y in range(n):
         for x in range(n):
+            if inside[y, x]:
+                fam = family(*FRGB[y, x])
+                grid[y][x] = (RAMPS[fam][FILL_SHADE.get(fam, 1)], 1.0)
+                continue
             if not on[y, x]:
                 continue
             r, g, b = RGB[y, x]
@@ -232,10 +301,10 @@ def convert(path):
         return path, None
     grids = {}
     for n, room in GRIDS.items():
-        C, RGB = to_cells(arr, n, room)
+        C, RGB, F, FRGB = to_cells(arr, n, room)
         if C is None:
             return path, None
-        grids[n] = recolour(C, RGB, n)
+        grids[n] = recolour(C, RGB, F, FRGB, n)
     return path, grids
 
 
