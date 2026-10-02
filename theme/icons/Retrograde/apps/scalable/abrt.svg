@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 <path fill="#962C64" d="M8 1h4v1h-4zM6 2h11v1h-11zM5 3h13v1h-13zM4 4h15v1h-15zM3 5h17v1h-17zM2 6h19v2h-19zM1 8h20v3h-20zM2 11h19v1h-19zM2 12h20v3h-20zM2 15h19v2h-19zM3 17h17v1h-17zM4 18h15v1h-15zM5 19h13v1h-13zM6 20h11v1h-11zM10 21h5v1h-5z"/>
-<path fill="#FFF0C8" d="M8 1h4v1h-4zM6 2h6v1h-6zM15 2h2v1h-2zM5 3h4v1h-4zM15 3h3v1h-3zM4 4h3v1h-3zM16 4h3v1h-3z"/>
-<path fill="#9A7660" d="M12 2h3v1h-3zM9 3h6v1h-6zM7 4h3v1h-3zM14 4h2v1h-2zM7 5h1v1h-1zM15 5h1v1h-1z"/>
-<path fill="#962C64" d="M10 4h1v1h-1zM12 4h2v1h-2zM5 5h2v1h-2zM8 5h2v1h-2zM13 5h2v1h-2zM16 5h1v1h-1zM5 6h5v1h-5zM13 6h5v1h-5zM4 7h6v2h-6zM13 7h6v1h-6zM13 8h8v3h-8zM3 9h7v2h-7zM2 11h8v3h-8zM13 11h7v3h-7zM3 14h16v1h-16zM4 15h6v1h-6zM13 15h6v1h-6zM5 16h5v2h-5zM13 16h5v2h-5zM9 18h5v1h-5z"/>
-<path fill="#FFB45E" d="M11 4h1v1h-1zM3 5h2v1h-2zM10 5h3v5h-3zM17 5h3v1h-3zM2 6h3v1h-3zM18 6h3v1h-3zM2 7h2v1h-2zM19 7h2v1h-2zM1 8h3v1h-3zM1 9h2v1h-2z"/>
+<path fill="#E04F67" d="M8 1h4v1h-4zM6 2h11v1h-11zM5 3h4v1h-4zM15 3h3v1h-3zM4 4h3v1h-3zM11 4h1v1h-1zM16 4h3v1h-3zM3 5h2v1h-2zM10 5h3v9h-3zM17 5h3v1h-3zM2 6h3v1h-3zM18 6h3v1h-3zM2 7h2v1h-2zM19 7h2v1h-2zM1 8h3v1h-3zM20 8h1v4h-1zM1 9h2v2h-2zM2 11h1v4h-1zM20 12h2v2h-2zM19 14h3v1h-3zM2 15h2v1h-2zM10 15h3v3h-3zM19 15h2v1h-2zM2 16h3v1h-3zM18 16h3v1h-3zM3 17h2v1h-2zM18 17h2v1h-2zM4 18h3v1h-3zM16 18h3v1h-3zM5 19h3v1h-3zM14 19h4v1h-4zM6 20h11v1h-11zM10 21h5v1h-5z"/>
+<path fill="#962C64" d="M9 3h6v1h-6zM7 4h4v1h-4zM12 4h4v1h-4zM5 5h5v2h-5zM13 5h4v1h-4zM13 6h5v1h-5zM4 7h6v2h-6zM13 7h6v1h-6zM13 8h7v6h-7zM3 9h7v5h-7zM3 14h16v1h-16zM4 15h6v1h-6zM13 15h6v1h-6zM5 16h5v2h-5zM13 16h5v2h-5zM7 18h9v1h-9zM8 19h6v1h-6z"/>
 <path fill="#0A0913" fill-opacity="0.75" d="M21 7h1v5h-1zM22 13h1v2h-1zM21 15h2v1h-2zM21 16h1v1h-1zM20 17h2v1h-2zM19 18h2v1h-2zM18 19h2v1h-2zM17 20h2v1h-2zM7 21h3v1h-3zM15 21h3v1h-3zM11 22h5v1h-5z"/>
-<path fill="#FF6E64" d="M1 10h2v1h-2zM10 10h3v4h-3zM20 11h1v1h-1zM20 12h2v2h-2zM2 14h1v1h-1zM19 14h3v1h-3zM2 15h2v1h-2zM10 15h3v3h-3zM19 15h2v1h-2zM2 16h3v1h-3zM18 16h3v1h-3zM3 17h2v1h-2zM18 17h2v1h-2zM4 18h3v1h-3zM16 18h3v1h-3z"/>
-<path fill="#6A2A68" d="M7 18h2v1h-2zM14 18h2v1h-2zM8 19h6v1h-6zM7 20h3v1h-3z"/>
-<path fill="#FF9EC0" d="M5 19h3v1h-3zM14 19h4v1h-4zM6 20h1v1h-1zM10 20h7v1h-7zM10 21h5v1h-5z"/>
 </svg>

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<path fill="#FFB45E" d="M8 3h7v1h-7zM5 4h13v1h-13zM4 5h15v1h-15zM2 6h19v1h-19zM1 7h21v1h-21zM3 8h17v2h-17zM5 10h13v2h-13zM6 12h11v1h-11zM7 13h9v2h-9zM9 16h5v3h-5zM10 19h3v1h-3z"/>
-<path fill="#FF6E64" d="M8 3h7v1h-7zM5 4h5v1h-5zM13 4h5v1h-5z"/>
-<path fill="#962C64" d="M10 4h3v1h-3zM6 5h11v1h-11zM4 6h4v1h-4zM15 6h4v1h-4zM3 7h3v1h-3zM10 7h3v1h-3zM17 7h3v1h-3zM3 8h1v1h-1zM7 8h9v1h-9zM19 8h1v1h-1zM5 9h3v1h-3zM15 9h3v1h-3zM5 10h2v1h-2zM11 10h1v1h-1zM16 10h2v1h-2zM5 11h1v1h-1zM8 11h7v1h-7zM17 11h1v1h-1zM6 12h3v1h-3zM14 12h3v1h-3zM7 13h1v1h-1zM15 13h1v1h-1zM9 14h5v1h-5zM9 16h1v1h-1zM13 16h1v1h-1zM11 17h1v2h-1z"/>
-<path fill="#FFB45E" d="M4 5h2v1h-2zM17 5h2v1h-2zM2 6h2v1h-2zM8 6h7v1h-7zM19 6h2v1h-2zM1 7h2v1h-2zM6 7h4v1h-4zM13 7h4v1h-4zM20 7h2v1h-2zM4 8h3v1h-3zM16 8h3v1h-3zM3 9h2v1h-2zM8 9h7v1h-7zM18 9h2v1h-2zM7 10h4v1h-4zM12 10h4v1h-4zM6 11h2v1h-2zM15 11h2v1h-2zM9 12h5v1h-5zM8 13h7v1h-7zM7 14h2v1h-2zM14 14h2v1h-2zM10 16h3v1h-3zM9 17h2v2h-2zM12 17h2v2h-2zM10 19h3v1h-3z"/>
+<path fill="#FF915E" d="M8 3h7v1h-7zM5 4h13v1h-13zM4 5h15v1h-15zM2 6h19v1h-19zM1 7h21v1h-21zM3 8h17v2h-17zM5 10h13v2h-13zM6 12h11v1h-11zM7 13h9v2h-9zM9 16h5v3h-5zM10 19h3v1h-3z"/>
+<path fill="#FF915E" d="M8 3h7v1h-7zM5 4h5v1h-5zM13 4h5v1h-5zM4 5h2v1h-2zM17 5h2v1h-2zM2 6h2v1h-2zM8 6h7v1h-7zM19 6h2v1h-2zM1 7h2v1h-2zM6 7h4v1h-4zM13 7h4v1h-4zM20 7h2v1h-2zM3 8h4v1h-4zM16 8h4v1h-4zM3 9h2v1h-2zM8 9h7v1h-7zM18 9h2v1h-2zM5 10h1v1h-1zM7 10h4v1h-4zM12 10h4v1h-4zM17 10h1v1h-1zM5 11h3v1h-3zM15 11h3v1h-3zM6 12h1v1h-1zM9 12h5v1h-5zM16 12h1v1h-1zM7 13h9v2h-9zM9 16h5v1h-5zM9 17h2v2h-2zM12 17h2v2h-2zM10 19h3v1h-3z"/>
+<path fill="#962C64" d="M10 4h3v1h-3zM6 5h11v1h-11zM4 6h4v1h-4zM15 6h4v1h-4zM3 7h3v1h-3zM10 7h3v1h-3zM17 7h3v1h-3zM7 8h9v1h-9zM5 9h3v1h-3zM15 9h3v1h-3zM6 10h1v1h-1zM11 10h1v1h-1zM16 10h1v1h-1zM8 11h7v1h-7zM7 12h2v1h-2zM14 12h2v1h-2zM11 17h1v2h-1z"/>
 <path fill="#0A0913" fill-opacity="0.75" d="M2 8h1v1h-1zM20 8h3v1h-3zM20 9h1v1h-1zM4 10h1v1h-1zM18 10h3v1h-3zM18 11h1v1h-1zM17 12h2v1h-2zM16 13h2v1h-2zM16 14h1v1h-1zM8 15h9v1h-9zM14 17h1v2h-1zM13 19h2v1h-2zM11 20h3v1h-3z"/>
 </svg>

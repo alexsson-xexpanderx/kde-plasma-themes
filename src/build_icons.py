@@ -6,12 +6,12 @@ Two kinds of icon go in:
 * Made here (icons_art.py): folders, file pages, the trash and the launcher's
   sun -- what Dolphin and the panel show most, drawn cell by cell.
 * Converted: every icon of candy-icons, and the coloured icons of Breeze that
-  candy has no version of, drawn onto a grid of cells.  Each cell's colour is
-  moved onto the nearest of the wallpaper's ramps (palette.py), so candy's
-  variety of colours survives but blues go violet, greens and cyans go sky
-  blue, and everything warm lands on the sunset.  Candy draws in lines, so
-  what an icon's outline encloses is filled with a dark shade of the line's
-  ramp and the line stays bright on it (see body).  Then the hard shadow.
+  candy has no version of, drawn onto a grid of cells.  Each icon goes onto
+  the nearest of the wallpaper's ramps (palette.py) to its commonest colour --
+  blues go violet, greens and cyans go sky blue, everything warm lands on the
+  sunset -- and is drawn in two colours of it.  Candy draws in lines, so what
+  an icon's outline encloses is filled with the dark one and the lines are
+  the bright one (see body and recolour).  Then the hard shadow.
 
 Each icon is drawn twice: 24 cells across for 24 px and up, 16 across for 16
 and 22 px.  They are written as SVG -- one path per colour, every cell a
@@ -83,7 +83,6 @@ RAMPS = {
     "violet": P.RAMP_VIOLET, "rose": P.RAMP_ROSE, "red": P.RAMP_RED, "orange": P.RAMP_ORANGE,
     "gold": P.RAMP_GOLD, "brown": P.RAMP_BROWN, "sky": P.RAMP_SKY, "grey": P.RAMP_GREY,
 }
-BAYER = np.array([[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]) / 16.0 + 1 / 32
 
 
 # ---------------------------------------------------------------- SVG
@@ -255,41 +254,58 @@ def family(r, g, b):
     return "sky"
 
 
-# The ramp shade an icon's inside is filled with: dark enough that the line
-# work, two or three shades up, stays the drawing.  The warm ramps start a
-# shade brighter than the others.
-FILL_SHADE = {"orange": 0, "gold": 0}
+# Each icon is drawn in one ramp, its commonest: candy's gradients run through
+# two or three, which cell by cell is a patchwork that hides what the icon
+# shows.  And in two colours of it: a bright one for every line -- outline and
+# the symbol inside alike -- and a dark one for what the outline encloses.
+LINE_SHADE = 3
+FILL_SHADE = {"orange": 0, "gold": 0}   # the warm ramps start a shade brighter
+FILL_RAMP = {"gold": "brown"}           # gold's darkest is too light to fill with
+FILL_DEFAULT = 1
+# An icon its outline does not enclose (a solid one, from Breeze or an app)
+# keeps its light and dark: two shades, picked by brightness.
+SOLID_SHADES = (1, 3)
+# Over the fill a line needs less of a cell to be drawn, so that the thin
+# details inside an icon -- a terminal's prompt, a page's lines -- show.
 INNER_THRESHOLD = 0.28
+LINE_ART = 0.25
+
+
+def fill_colour(fam):
+    fam = FILL_RAMP.get(fam, fam)
+    return RAMPS[fam][FILL_SHADE.get(fam, FILL_DEFAULT)]
 
 
 def recolour(C, RGB, F, FRGB, n):
-    """Each covered cell to the nearest wallpaper ramp, at the shade its
-    brightness picks, dithered between shades the way the wallpaper is; the
-    ramp's darkest shade is kept for outlines and never used for a fill.
-    Cells the outline encloses get a flat, darker shade of the ramp of the
-    line around them."""
-    # Over the fill a line needs less of a cell to be drawn, so that the thin
-    # details inside an icon -- a terminal's prompt, a page's lines -- show.
+    """The covered cells in two colours of one wallpaper ramp: lines bright,
+    what they enclose dark (see LINE_SHADE)."""
     on = (C >= THRESHOLD[n]) | ((C >= INNER_THRESHOLD) & (C + F >= 0.75))
+    # A faint cell on its own over the fill is a speck, not a detail.
+    faint = on & (C < THRESHOLD[n])
+    lonely = ndimage.convolve(on.astype(int), np.ones((3, 3), int), mode="constant") <= 1
+    on &= ~(faint & lonely)
     inside = ~on & (C + F >= 0.5)
     inside |= ndimage.binary_fill_holes(on | inside) & ~on
+    # Fill showing at the outside is a gap in candy's outline: close it, so
+    # the border is one unbroken line.
+    outside = ~np.pad(on | inside, 1)
+    gap = inside & ndimage.binary_dilation(outside)[1:-1, 1:-1]
+    on, inside = on | gap, inside & ~gap
+    counts = Counter(family(*RGB[y, x]) for y, x in zip(*np.nonzero(on)))
+    if not counts:
+        return A.blank(n)
+    ramp = RAMPS[counts.most_common(1)[0][0]]
+    fill = fill_colour(counts.most_common(1)[0][0])
+    line_art = inside.sum() >= LINE_ART * (on | inside).sum()
     grid = A.blank(n)
-    for y in range(n):
-        for x in range(n):
-            if inside[y, x]:
-                fam = family(*FRGB[y, x])
-                grid[y][x] = (RAMPS[fam][FILL_SHADE.get(fam, 1)], 1.0)
-                continue
-            if not on[y, x]:
-                continue
-            r, g, b = RGB[y, x]
-            ramp = RAMPS[family(r, g, b)]
-            v = max(r, g, b)
-            t = np.clip((v - 0.25) / 0.75, 0, 1) * (len(ramp) - 1)
-            i = int(t)
-            if t - i > BAYER[y % 4, x % 4]:
-                i += 1
-            grid[y][x] = (ramp[max(1, min(i, len(ramp) - 1))], 1.0)
+    for y, x in zip(*np.nonzero(on | inside)):
+        if inside[y, x]:
+            grid[y][x] = (fill, 1.0)
+        elif line_art:
+            grid[y][x] = (ramp[LINE_SHADE], 1.0)
+        else:
+            bright = int(max(RGB[y, x]) >= 0.6)
+            grid[y][x] = (ramp[SOLID_SHADES[bright]], 1.0)
     return A.add_shadow(grid)
 
 

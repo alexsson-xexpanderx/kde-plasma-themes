@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 <path fill="#433E62" d="M6 1h11v1h-11zM3 2h17v1h-17zM1 3h21v17h-21zM3 20h17v1h-17zM6 21h11v1h-11z"/>
-<path fill="#433E62" d="M6 1h11v1h-11zM3 2h17v1h-17zM1 3h21v17h-21zM3 20h17v1h-17zM6 21h11v1h-11z"/>
+<path fill="#AAA5CA" d="M6 1h11v1h-11zM3 2h17v1h-17zM1 3h4v1h-4zM18 3h4v1h-4zM1 4h2v1h-2zM20 4h2v1h-2zM1 5h4v1h-4zM18 5h4v1h-4zM1 6h21v1h-21zM1 7h2v5h-2zM5 7h13v1h-13zM20 7h2v5h-2zM1 12h4v1h-4zM18 12h4v1h-4zM1 13h21v1h-21zM1 14h2v5h-2zM5 14h13v1h-13zM20 14h2v5h-2zM1 19h4v1h-4zM18 19h4v1h-4zM3 20h17v1h-17zM6 21h11v1h-11z"/>
+<path fill="#433E62" d="M5 3h13v1h-13zM3 4h17v1h-17zM5 5h13v1h-13zM3 7h2v1h-2zM18 7h2v1h-2zM3 8h17v4h-17zM5 12h13v1h-13zM3 14h2v1h-2zM18 14h2v1h-2zM3 15h17v4h-17zM5 19h13v1h-13z"/>
 <path fill="#0A0913" fill-opacity="0.75" d="M22 4h1v16h-1zM2 20h1v1h-1zM20 20h3v1h-3zM4 21h2v1h-2zM17 21h4v1h-4zM7 22h11v1h-11z"/>
 </svg>

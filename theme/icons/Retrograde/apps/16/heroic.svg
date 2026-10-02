@@ -1,16 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-<path fill="#C8B4FF" d="M7 0h1v1h-1zM5 1h6v1h-6zM2 2h11v7h-11zM3 9h9v2h-9zM4 11h7v1h-7zM5 12h5v1h-5zM6 13h3v1h-3z"/>
-<path fill="#D2F6FF" d="M7 0h1v1h-1zM7 1h3v1h-3zM10 2h3v1h-3zM12 4h1v1h-1zM11 7h1v1h-1zM12 8h1v1h-1zM11 9h1v1h-1zM10 10h1v1h-1zM9 11h1v1h-1zM7 12h3v1h-3zM7 13h2v1h-2z"/>
-<path fill="#C8B4FF" d="M5 1h2v1h-2zM2 2h4v1h-4zM2 3h2v1h-2zM2 4h1v3h-1zM2 7h2v2h-2zM3 9h1v1h-1zM3 10h2v1h-2zM4 11h2v1h-2zM5 12h2v1h-2zM6 13h1v1h-1z"/>
-<path fill="#8BE3F7" d="M10 1h1v1h-1zM9 2h1v1h-1zM12 3h1v1h-1zM12 7h1v1h-1zM11 8h1v1h-1zM10 9h1v1h-1zM11 10h1v1h-1zM10 11h1v1h-1z"/>
-<path fill="#4A378A" d="M6 2h1v1h-1zM8 2h1v1h-1zM4 3h2v1h-2zM3 4h2v3h-2zM4 7h1v3h-1zM5 10h1v1h-1zM6 11h1v1h-1z"/>
-<path fill="#FF6E64" d="M7 2h1v1h-1zM6 3h2v1h-2zM6 4h3v1h-3zM7 5h1v1h-1z"/>
-<path fill="#E04F67" d="M8 3h1v1h-1z"/>
-<path fill="#433E62" d="M9 3h1v1h-1z"/>
-<path fill="#3E6A9A" d="M10 3h2v2h-2zM10 5h3v2h-3zM10 7h1v2h-1zM9 10h1v1h-1zM7 11h2v1h-2z"/>
+<path fill="#8BE3F7" d="M7 0h1v1h-1zM5 1h6v1h-6zM2 2h11v7h-11zM3 9h9v2h-9zM4 11h7v1h-7zM5 12h5v1h-5zM6 13h3v1h-3z"/>
+<path fill="#8BE3F7" d="M7 0h1v1h-1zM5 1h6v1h-6zM2 2h4v1h-4zM7 2h1v1h-1zM9 2h4v1h-4zM2 3h2v1h-2zM6 3h3v2h-3zM12 3h1v4h-1zM2 4h1v3h-1zM7 5h1v3h-1zM2 7h2v2h-2zM11 7h2v2h-2zM6 8h3v2h-3zM3 9h1v1h-1zM10 9h2v2h-2zM3 10h2v1h-2zM7 10h1v1h-1zM4 11h2v1h-2zM9 11h2v1h-2zM5 12h5v1h-5zM6 13h3v1h-3z"/>
+<path fill="#3E6A9A" d="M6 2h1v1h-1zM8 2h1v1h-1zM4 3h2v1h-2zM9 3h3v2h-3zM3 4h3v1h-3zM3 5h4v2h-4zM8 5h4v2h-4zM4 7h3v1h-3zM8 7h3v1h-3zM4 8h2v2h-2zM9 8h2v1h-2zM9 9h1v1h-1zM5 10h2v1h-2zM8 10h2v1h-2zM6 11h3v1h-3z"/>
 <path fill="#0A0913" fill-opacity="0.75" d="M13 3h1v6h-1zM12 9h2v1h-2zM12 10h1v1h-1zM11 11h2v1h-2zM10 12h2v1h-2zM9 13h2v1h-2zM7 14h3v1h-3z"/>
-<path fill="#962C64" d="M5 4h1v1h-1zM9 4h1v1h-1zM5 5h2v3h-2zM8 5h2v3h-2zM5 8h1v1h-1zM9 8h1v1h-1z"/>
-<path fill="#FFB45E" d="M7 6h1v2h-1zM6 8h3v1h-3z"/>
-<path fill="#9A7660" d="M5 9h1v1h-1zM9 9h1v1h-1zM6 10h1v1h-1zM8 10h1v1h-1z"/>
-<path fill="#FFF0C8" d="M6 9h3v1h-3zM7 10h1v1h-1z"/>
 </svg>
