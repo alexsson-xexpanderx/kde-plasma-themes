@@ -1,0 +1,510 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2000" height="12" viewBox="0 0 2000 12" shape-rendering="crispEdges">
+<g id="normal-topleft">
+  <rect x="0" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="2" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="1" y="1" width="2" height="2" fill="#433E62"/>
+  <rect x="2" y="1" width="2" height="2" fill="#2C2A3E"/>
+  <rect x="0" y="2" width="2" height="2" fill="#433E62"/>
+  <rect x="2" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="1" y="1" width="1" height="1" fill="#433E62"/>
+  <rect x="2" y="1" width="2" height="1" fill="#2C2A3E"/>
+  <rect x="0" y="2" width="1" height="2" fill="#433E62"/>
+  <rect x="1" y="2" width="3" height="2" fill="#1C1A30"/>
+</g>
+<g id="normal-top">
+  <rect x="10" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="10" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="10" y="1" width="1" height="2" fill="#2C2A3E"/>
+  <rect x="10" y="0" width="1" height="1" fill="#433E62"/>
+  <rect x="10" y="1" width="1" height="1" fill="#2C2A3E"/>
+  <rect x="10" y="2" width="1" height="2" fill="#1C1A30"/>
+</g>
+<g id="normal-topright">
+  <rect x="17" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="17" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="17" y="1" width="3" height="2" fill="#2C2A3E"/>
+  <rect x="19" y="1" width="1" height="2" fill="#433E62"/>
+  <rect x="17" y="2" width="4" height="2" fill="#1C1A30"/>
+  <rect x="17" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="17" y="1" width="2" height="1" fill="#2C2A3E"/>
+  <rect x="19" y="1" width="1" height="1" fill="#433E62"/>
+  <rect x="17" y="2" width="3" height="2" fill="#1C1A30"/>
+  <rect x="20" y="2" width="1" height="2" fill="#433E62"/>
+</g>
+<g id="normal-left">
+  <rect x="27" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="27" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="27" y="0" width="1" height="1" fill="#433E62"/>
+  <rect x="28" y="0" width="3" height="1" fill="#1C1A30"/>
+</g>
+<g id="normal-center">
+  <rect x="37" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="37" y="0" width="1" height="1" fill="#1C1A30"/>
+</g>
+<g id="normal-right">
+  <rect x="44" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="44" y="0" width="4" height="1" fill="#1C1A30"/>
+  <rect x="44" y="0" width="3" height="1" fill="#1C1A30"/>
+  <rect x="47" y="0" width="1" height="1" fill="#433E62"/>
+</g>
+<g id="normal-bottomleft">
+  <rect x="54" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="54" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="55" y="0" width="3" height="3" fill="#1C1A30"/>
+  <rect x="55" y="2" width="2" height="1" fill="#433E62"/>
+  <rect x="56" y="2" width="2" height="2" fill="#121120"/>
+  <rect x="54" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="55" y="0" width="3" height="2" fill="#1C1A30"/>
+  <rect x="55" y="2" width="1" height="1" fill="#433E62"/>
+  <rect x="56" y="2" width="2" height="1" fill="#121120"/>
+  <rect x="56" y="3" width="2" height="1" fill="#433E62"/>
+</g>
+<g id="normal-bottom">
+  <rect x="64" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="64" y="0" width="1" height="3" fill="#1C1A30"/>
+  <rect x="64" y="2" width="1" height="2" fill="#121120"/>
+  <rect x="64" y="0" width="1" height="2" fill="#1C1A30"/>
+  <rect x="64" y="2" width="1" height="1" fill="#121120"/>
+  <rect x="64" y="3" width="1" height="1" fill="#433E62"/>
+</g>
+<g id="normal-bottomright">
+  <rect x="71" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="71" y="0" width="4" height="2" fill="#1C1A30"/>
+  <rect x="71" y="0" width="3" height="3" fill="#1C1A30"/>
+  <rect x="71" y="2" width="3" height="1" fill="#121120"/>
+  <rect x="71" y="2" width="2" height="2" fill="#121120"/>
+  <rect x="71" y="0" width="3" height="2" fill="#1C1A30"/>
+  <rect x="74" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="71" y="2" width="2" height="1" fill="#121120"/>
+  <rect x="73" y="2" width="1" height="1" fill="#433E62"/>
+  <rect x="71" y="3" width="2" height="1" fill="#433E62"/>
+</g>
+<g id="normal-hint-top-margin">
+  <rect x="81" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-right-margin">
+  <rect x="88" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-bottom-margin">
+  <rect x="102" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-left-margin">
+  <rect x="109" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-topleft">
+  <rect x="123" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="125" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="124" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="123" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-top">
+  <rect x="133" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="133" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-topright">
+  <rect x="140" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="140" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="142" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="143" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-left">
+  <rect x="150" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="150" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-center">
+  <rect x="160" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-right">
+  <rect x="167" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="170" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-bottomleft">
+  <rect x="177" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="177" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="178" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="179" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-bottom">
+  <rect x="187" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="187" y="3" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-bottomright">
+  <rect x="194" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="197" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="196" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="194" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="hover-hint-top-margin">
+  <rect x="204" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-right-margin">
+  <rect x="211" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-bottom-margin">
+  <rect x="225" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-left-margin">
+  <rect x="232" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="focus-topleft">
+  <rect x="246" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="248" y="0" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="247" y="1" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="246" y="2" width="1" height="2" fill="#FF5C8A"/>
+</g>
+<g id="focus-top">
+  <rect x="256" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="256" y="0" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-topright">
+  <rect x="263" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="263" y="0" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="265" y="1" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="266" y="2" width="1" height="2" fill="#FF5C8A"/>
+</g>
+<g id="focus-left">
+  <rect x="273" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="273" y="0" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-center">
+  <rect x="283" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="focus-right">
+  <rect x="290" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="293" y="0" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-bottomleft">
+  <rect x="300" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="300" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="301" y="2" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="302" y="3" width="2" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-bottom">
+  <rect x="310" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="310" y="3" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-bottomright">
+  <rect x="317" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="320" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="319" y="2" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="317" y="3" width="2" height="1" fill="#FF5C8A"/>
+</g>
+<g id="focus-hint-top-margin">
+  <rect x="327" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="focus-hint-right-margin">
+  <rect x="334" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="focus-hint-bottom-margin">
+  <rect x="348" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="focus-hint-left-margin">
+  <rect x="355" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-topleft">
+  <rect x="369" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="371" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="370" y="1" width="2" height="2" fill="#433E62"/>
+  <rect x="371" y="1" width="2" height="2" fill="#0C0A16"/>
+  <rect x="369" y="2" width="2" height="2" fill="#433E62"/>
+  <rect x="371" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="370" y="1" width="1" height="1" fill="#433E62"/>
+  <rect x="371" y="1" width="2" height="1" fill="#0C0A16"/>
+  <rect x="369" y="2" width="1" height="2" fill="#433E62"/>
+  <rect x="370" y="2" width="3" height="2" fill="#100E1C"/>
+</g>
+<g id="pressed-top">
+  <rect x="379" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="379" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="379" y="1" width="1" height="2" fill="#0C0A16"/>
+  <rect x="379" y="0" width="1" height="1" fill="#433E62"/>
+  <rect x="379" y="1" width="1" height="1" fill="#0C0A16"/>
+  <rect x="379" y="2" width="1" height="2" fill="#100E1C"/>
+</g>
+<g id="pressed-topright">
+  <rect x="386" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="386" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="386" y="1" width="3" height="2" fill="#0C0A16"/>
+  <rect x="388" y="1" width="1" height="2" fill="#433E62"/>
+  <rect x="386" y="2" width="4" height="2" fill="#100E1C"/>
+  <rect x="386" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="386" y="1" width="2" height="1" fill="#0C0A16"/>
+  <rect x="388" y="1" width="1" height="1" fill="#433E62"/>
+  <rect x="386" y="2" width="3" height="2" fill="#100E1C"/>
+  <rect x="389" y="2" width="1" height="2" fill="#433E62"/>
+</g>
+<g id="pressed-left">
+  <rect x="396" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="396" y="0" width="2" height="1" fill="#433E62"/>
+  <rect x="396" y="0" width="1" height="1" fill="#433E62"/>
+  <rect x="397" y="0" width="3" height="1" fill="#100E1C"/>
+</g>
+<g id="pressed-center">
+  <rect x="406" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="406" y="0" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="pressed-right">
+  <rect x="413" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="413" y="0" width="4" height="1" fill="#100E1C"/>
+  <rect x="413" y="0" width="3" height="1" fill="#100E1C"/>
+  <rect x="416" y="0" width="1" height="1" fill="#433E62"/>
+</g>
+<g id="pressed-bottomleft">
+  <rect x="423" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="423" y="0" width="2" height="2" fill="#433E62"/>
+  <rect x="424" y="0" width="3" height="3" fill="#100E1C"/>
+  <rect x="424" y="2" width="2" height="1" fill="#433E62"/>
+  <rect x="425" y="2" width="2" height="2" fill="#100E1C"/>
+  <rect x="423" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="424" y="0" width="3" height="2" fill="#100E1C"/>
+  <rect x="424" y="2" width="1" height="1" fill="#433E62"/>
+  <rect x="425" y="2" width="2" height="1" fill="#100E1C"/>
+  <rect x="425" y="3" width="2" height="1" fill="#433E62"/>
+</g>
+<g id="pressed-bottom">
+  <rect x="433" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="433" y="0" width="1" height="4" fill="#100E1C"/>
+  <rect x="433" y="0" width="1" height="3" fill="#100E1C"/>
+  <rect x="433" y="3" width="1" height="1" fill="#433E62"/>
+</g>
+<g id="pressed-bottomright">
+  <rect x="440" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="440" y="0" width="4" height="2" fill="#100E1C"/>
+  <rect x="440" y="0" width="3" height="3" fill="#100E1C"/>
+  <rect x="440" y="2" width="3" height="1" fill="#100E1C"/>
+  <rect x="440" y="2" width="2" height="2" fill="#100E1C"/>
+  <rect x="440" y="0" width="3" height="2" fill="#100E1C"/>
+  <rect x="443" y="0" width="1" height="2" fill="#433E62"/>
+  <rect x="440" y="2" width="2" height="1" fill="#100E1C"/>
+  <rect x="442" y="2" width="1" height="1" fill="#433E62"/>
+  <rect x="440" y="3" width="2" height="1" fill="#433E62"/>
+</g>
+<g id="pressed-hint-top-margin">
+  <rect x="450" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-right-margin">
+  <rect x="457" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-bottom-margin">
+  <rect x="471" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-left-margin">
+  <rect x="478" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-hover-topleft">
+  <rect x="492" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="494" y="0" width="2" height="1" fill="#312D4A"/>
+  <rect x="493" y="1" width="1" height="1" fill="#312D4A"/>
+  <rect x="494" y="1" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="492" y="2" width="1" height="2" fill="#312D4A"/>
+  <rect x="493" y="2" width="3" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-hover-top">
+  <rect x="502" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="502" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="502" y="1" width="1" height="3" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-hover-topright">
+  <rect x="509" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="509" y="0" width="2" height="1" fill="#312D4A"/>
+  <rect x="509" y="1" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="511" y="1" width="1" height="1" fill="#312D4A"/>
+  <rect x="509" y="2" width="3" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="512" y="2" width="1" height="2" fill="#312D4A"/>
+</g>
+<g id="toolbutton-hover-left">
+  <rect x="519" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="519" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="520" y="0" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-hover-center">
+  <rect x="529" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="529" y="0" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-hover-right">
+  <rect x="536" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="536" y="0" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="539" y="0" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="toolbutton-hover-bottomleft">
+  <rect x="546" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="546" y="0" width="1" height="2" fill="#312D4A"/>
+  <rect x="547" y="0" width="3" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="547" y="2" width="1" height="1" fill="#312D4A"/>
+  <rect x="548" y="2" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="548" y="3" width="2" height="1" fill="#312D4A"/>
+</g>
+<g id="toolbutton-hover-bottom">
+  <rect x="556" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="556" y="0" width="1" height="3" fill="#252239" fill-opacity="0.9"/>
+  <rect x="556" y="3" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="toolbutton-hover-bottomright">
+  <rect x="563" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="563" y="0" width="3" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="566" y="0" width="1" height="2" fill="#312D4A"/>
+  <rect x="563" y="2" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="565" y="2" width="1" height="1" fill="#312D4A"/>
+  <rect x="563" y="3" width="2" height="1" fill="#312D4A"/>
+</g>
+<g id="toolbutton-hover-hint-top-margin">
+  <rect x="573" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-hover-hint-right-margin">
+  <rect x="580" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-hover-hint-bottom-margin">
+  <rect x="594" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-hover-hint-left-margin">
+  <rect x="601" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-focus-topleft">
+  <rect x="615" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="617" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="616" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="615" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-top">
+  <rect x="625" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="625" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-topright">
+  <rect x="632" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="632" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="634" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="635" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-left">
+  <rect x="642" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="642" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-center">
+  <rect x="652" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-focus-right">
+  <rect x="659" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="662" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-bottomleft">
+  <rect x="669" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="669" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="670" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="671" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-bottom">
+  <rect x="679" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="679" y="3" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-bottomright">
+  <rect x="686" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="689" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="688" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+  <rect x="686" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.9"/>
+</g>
+<g id="toolbutton-focus-hint-top-margin">
+  <rect x="696" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-focus-hint-right-margin">
+  <rect x="703" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-focus-hint-bottom-margin">
+  <rect x="717" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-focus-hint-left-margin">
+  <rect x="724" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-pressed-topleft">
+  <rect x="738" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="740" y="0" width="2" height="2" fill="#B74569"/>
+  <rect x="739" y="1" width="2" height="2" fill="#B74569"/>
+  <rect x="740" y="1" width="2" height="2" fill="#0C0A16"/>
+  <rect x="738" y="2" width="2" height="2" fill="#B74569"/>
+  <rect x="740" y="0" width="2" height="1" fill="#B74569"/>
+  <rect x="739" y="1" width="1" height="1" fill="#B74569"/>
+  <rect x="740" y="1" width="2" height="1" fill="#0C0A16"/>
+  <rect x="738" y="2" width="1" height="2" fill="#B74569"/>
+  <rect x="739" y="2" width="3" height="2" fill="#100E1C"/>
+</g>
+<g id="toolbutton-pressed-top">
+  <rect x="748" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="748" y="0" width="1" height="2" fill="#B74569"/>
+  <rect x="748" y="1" width="1" height="2" fill="#0C0A16"/>
+  <rect x="748" y="0" width="1" height="1" fill="#B74569"/>
+  <rect x="748" y="1" width="1" height="1" fill="#0C0A16"/>
+  <rect x="748" y="2" width="1" height="2" fill="#100E1C"/>
+</g>
+<g id="toolbutton-pressed-topright">
+  <rect x="755" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="755" y="0" width="2" height="2" fill="#B74569"/>
+  <rect x="755" y="1" width="3" height="2" fill="#0C0A16"/>
+  <rect x="757" y="1" width="1" height="2" fill="#B74569"/>
+  <rect x="755" y="2" width="4" height="2" fill="#100E1C"/>
+  <rect x="755" y="0" width="2" height="1" fill="#B74569"/>
+  <rect x="755" y="1" width="2" height="1" fill="#0C0A16"/>
+  <rect x="757" y="1" width="1" height="1" fill="#B74569"/>
+  <rect x="755" y="2" width="3" height="2" fill="#100E1C"/>
+  <rect x="758" y="2" width="1" height="2" fill="#B74569"/>
+</g>
+<g id="toolbutton-pressed-left">
+  <rect x="765" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="765" y="0" width="2" height="1" fill="#B74569"/>
+  <rect x="765" y="0" width="1" height="1" fill="#B74569"/>
+  <rect x="766" y="0" width="3" height="1" fill="#100E1C"/>
+</g>
+<g id="toolbutton-pressed-center">
+  <rect x="775" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="775" y="0" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="toolbutton-pressed-right">
+  <rect x="782" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="782" y="0" width="4" height="1" fill="#100E1C"/>
+  <rect x="782" y="0" width="3" height="1" fill="#100E1C"/>
+  <rect x="785" y="0" width="1" height="1" fill="#B74569"/>
+</g>
+<g id="toolbutton-pressed-bottomleft">
+  <rect x="792" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="792" y="0" width="2" height="2" fill="#B74569"/>
+  <rect x="793" y="0" width="3" height="3" fill="#100E1C"/>
+  <rect x="793" y="2" width="2" height="1" fill="#B74569"/>
+  <rect x="794" y="2" width="2" height="2" fill="#100E1C"/>
+  <rect x="792" y="0" width="1" height="2" fill="#B74569"/>
+  <rect x="793" y="0" width="3" height="2" fill="#100E1C"/>
+  <rect x="793" y="2" width="1" height="1" fill="#B74569"/>
+  <rect x="794" y="2" width="2" height="1" fill="#100E1C"/>
+  <rect x="794" y="3" width="2" height="1" fill="#B74569"/>
+</g>
+<g id="toolbutton-pressed-bottom">
+  <rect x="802" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="802" y="0" width="1" height="4" fill="#100E1C"/>
+  <rect x="802" y="0" width="1" height="3" fill="#100E1C"/>
+  <rect x="802" y="3" width="1" height="1" fill="#B74569"/>
+</g>
+<g id="toolbutton-pressed-bottomright">
+  <rect x="809" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="809" y="0" width="4" height="2" fill="#100E1C"/>
+  <rect x="809" y="0" width="3" height="3" fill="#100E1C"/>
+  <rect x="809" y="2" width="3" height="1" fill="#100E1C"/>
+  <rect x="809" y="2" width="2" height="2" fill="#100E1C"/>
+  <rect x="809" y="0" width="3" height="2" fill="#100E1C"/>
+  <rect x="812" y="0" width="1" height="2" fill="#B74569"/>
+  <rect x="809" y="2" width="2" height="1" fill="#100E1C"/>
+  <rect x="811" y="2" width="1" height="1" fill="#B74569"/>
+  <rect x="809" y="3" width="2" height="1" fill="#B74569"/>
+</g>
+<g id="toolbutton-pressed-hint-top-margin">
+  <rect x="819" y="0" width="1" height="5" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-pressed-hint-right-margin">
+  <rect x="826" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-pressed-hint-bottom-margin">
+  <rect x="840" y="0" width="1" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="toolbutton-pressed-hint-left-margin">
+  <rect x="847" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hint-stretch-borders">
+  <rect x="861" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+</svg>

@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "alexsson"
+            }
+        ],
+        "Category": "",
+        "Description": "Dark retro theme: a pixel-art dusk, pixel planets for window buttons and a sunset stripe. Made to sit behind Conky Orrery.",
+        "Id": "Retrograde",
+        "License": "GPL-3.0-or-later",
+        "Name": "Retrograde",
+        "Version": "1.0",
+        "Website": "https://github.com/alexsson-xexpanderx/kde-plasma-themes"
+    },
+    "X-Plasma-APIVersion": "2"
+}

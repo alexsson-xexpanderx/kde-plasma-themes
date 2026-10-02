@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Conky Orrery (pixel)
+Comment=Pixel-art armillary clock for the Retrograde theme: date on the hoops, one orbiting body per CPU core
+Icon=utilities-system-monitor
+# Assumes the repository is at ~/git/kde-plasma-themes; change the path if not.
+Exec=sh -c "cd \\$HOME/git/kde-plasma-themes/extras/conky-orrery-pixel && exec conky --pause=5 --config=\\$PWD/start_conky_orrery"
+Terminal=false
+Type=Application
+StartupNotify=false
+Hidden=false
+X-GNOME-Autostart-enabled=true

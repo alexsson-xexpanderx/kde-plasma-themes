@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2000" height="10" viewBox="0 0 2000 10" shape-rendering="crispEdges">
+<g id="north-active-tab-topleft">
+  <rect x="0" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="2" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="1" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="0" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-top">
+  <rect x="10" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="10" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-topright">
+  <rect x="17" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="17" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="17" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="17" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-left">
+  <rect x="27" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="27" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-center">
+  <rect x="37" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="37" y="0" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-right">
+  <rect x="44" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="44" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-bottomleft">
+  <rect x="54" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="54" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="55" y="2" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="56" y="2" width="2" height="2" fill="#FF5C8A"/>
+</g>
+<g id="north-active-tab-bottom">
+  <rect x="64" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="64" y="0" width="1" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="64" y="2" width="1" height="2" fill="#FF5C8A"/>
+</g>
+<g id="north-active-tab-bottomright">
+  <rect x="71" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="71" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="71" y="2" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="73" y="2" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="north-active-tab-hint-top-margin">
+  <rect x="81" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="north-active-tab-hint-right-margin">
+  <rect x="88" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="north-active-tab-hint-bottom-margin">
+  <rect x="102" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="north-active-tab-hint-left-margin">
+  <rect x="109" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="south-active-tab-topleft">
+  <rect x="123" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="125" y="0" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="124" y="1" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="123" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-top">
+  <rect x="133" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="133" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="133" y="2" width="1" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-topright">
+  <rect x="140" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="140" y="0" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="142" y="1" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="140" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-left">
+  <rect x="150" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="150" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-center">
+  <rect x="160" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="160" y="0" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-right">
+  <rect x="167" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="167" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-bottomleft">
+  <rect x="177" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="177" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="178" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="179" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-bottom">
+  <rect x="187" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="187" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-bottomright">
+  <rect x="194" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="194" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="194" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="194" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="south-active-tab-hint-top-margin">
+  <rect x="204" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="south-active-tab-hint-right-margin">
+  <rect x="211" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="south-active-tab-hint-bottom-margin">
+  <rect x="225" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="south-active-tab-hint-left-margin">
+  <rect x="232" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="west-active-tab-topleft">
+  <rect x="246" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="248" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="247" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="246" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-top">
+  <rect x="256" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="256" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-topright">
+  <rect x="263" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="263" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="263" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="263" y="2" width="2" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="265" y="2" width="2" height="2" fill="#FF5C8A"/>
+</g>
+<g id="west-active-tab-left">
+  <rect x="273" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="273" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-center">
+  <rect x="283" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="283" y="0" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-right">
+  <rect x="290" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="290" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="292" y="0" width="2" height="1" fill="#FF5C8A"/>
+</g>
+<g id="west-active-tab-bottomleft">
+  <rect x="300" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="300" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="301" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="302" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-bottom">
+  <rect x="310" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="310" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-bottomright">
+  <rect x="317" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="317" y="0" width="2" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="319" y="0" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="317" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="317" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="west-active-tab-hint-top-margin">
+  <rect x="327" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="west-active-tab-hint-right-margin">
+  <rect x="334" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="west-active-tab-hint-bottom-margin">
+  <rect x="348" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="west-active-tab-hint-left-margin">
+  <rect x="355" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="east-active-tab-topleft">
+  <rect x="369" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="371" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="370" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="369" y="2" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="371" y="2" width="2" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-top">
+  <rect x="379" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="379" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-topright">
+  <rect x="386" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="386" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="386" y="1" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="386" y="2" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-left">
+  <rect x="396" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="396" y="0" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="398" y="0" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-center">
+  <rect x="406" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="406" y="0" width="1" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-right">
+  <rect x="413" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="413" y="0" width="4" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-bottomleft">
+  <rect x="423" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="423" y="0" width="2" height="2" fill="#FF5C8A"/>
+  <rect x="425" y="0" width="2" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="424" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="425" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-bottom">
+  <rect x="433" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="433" y="0" width="1" height="4" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-bottomright">
+  <rect x="440" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="440" y="0" width="4" height="2" fill="#252239" fill-opacity="0.9"/>
+  <rect x="440" y="2" width="3" height="1" fill="#252239" fill-opacity="0.9"/>
+  <rect x="440" y="3" width="2" height="1" fill="#252239" fill-opacity="0.9"/>
+</g>
+<g id="east-active-tab-hint-top-margin">
+  <rect x="450" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="east-active-tab-hint-right-margin">
+  <rect x="457" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="east-active-tab-hint-bottom-margin">
+  <rect x="471" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="east-active-tab-hint-left-margin">
+  <rect x="478" y="0" width="8" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hint-stretch-borders">
+  <rect x="492" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+</svg>

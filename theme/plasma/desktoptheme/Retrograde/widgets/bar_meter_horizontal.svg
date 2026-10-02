@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2000" height="12" viewBox="0 0 2000 12" shape-rendering="crispEdges">
+<g id="bar-inactive-topleft">
+  <rect x="0" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="1" y="0" width="1" height="2" fill="#312D4A"/>
+  <rect x="0" y="1" width="2" height="1" fill="#312D4A"/>
+  <rect x="1" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="0" y="1" width="1" height="1" fill="#312D4A"/>
+  <rect x="1" y="1" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="bar-inactive-top">
+  <rect x="8" y="0" width="1" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="8" y="0" width="1" height="2" fill="#312D4A"/>
+  <rect x="8" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="8" y="1" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="bar-inactive-topright">
+  <rect x="15" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="15" y="0" width="1" height="2" fill="#312D4A"/>
+  <rect x="15" y="1" width="2" height="1" fill="#100E1C"/>
+  <rect x="15" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="15" y="1" width="1" height="1" fill="#100E1C"/>
+  <rect x="16" y="1" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="bar-inactive-left">
+  <rect x="23" y="0" width="2" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="23" y="0" width="2" height="1" fill="#312D4A"/>
+  <rect x="23" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="24" y="0" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="bar-inactive-center">
+  <rect x="31" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="31" y="0" width="1" height="1" fill="#100E1C"/>
+</g>
+<g id="bar-inactive-right">
+  <rect x="38" y="0" width="2" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="38" y="0" width="2" height="1" fill="#100E1C"/>
+  <rect x="38" y="0" width="1" height="1" fill="#100E1C"/>
+  <rect x="39" y="0" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="bar-inactive-bottomleft">
+  <rect x="46" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="46" y="0" width="2" height="1" fill="#312D4A"/>
+  <rect x="47" y="0" width="1" height="2" fill="#100E1C"/>
+  <rect x="46" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="47" y="0" width="1" height="1" fill="#100E1C"/>
+  <rect x="47" y="1" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="bar-inactive-bottom">
+  <rect x="54" y="0" width="1" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="54" y="0" width="1" height="2" fill="#100E1C"/>
+  <rect x="54" y="0" width="1" height="1" fill="#100E1C"/>
+  <rect x="54" y="1" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="bar-inactive-bottomright">
+  <rect x="61" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="61" y="0" width="2" height="1" fill="#100E1C"/>
+  <rect x="61" y="0" width="1" height="2" fill="#100E1C"/>
+  <rect x="61" y="0" width="1" height="1" fill="#100E1C"/>
+  <rect x="62" y="0" width="1" height="1" fill="#312D4A"/>
+  <rect x="61" y="1" width="1" height="1" fill="#312D4A"/>
+</g>
+<g id="bar-active-topleft">
+  <rect x="69" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="70" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="69" y="1" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="70" y="0" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="69" y="1" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="70" y="1" width="1" height="1" fill="#FF85A7"/>
+</g>
+<g id="bar-active-top">
+  <rect x="77" y="0" width="1" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="77" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="77" y="0" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="77" y="1" width="1" height="1" fill="#FF85A7"/>
+</g>
+<g id="bar-active-topright">
+  <rect x="84" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="84" y="0" width="1" height="2" fill="#FF5C8A"/>
+  <rect x="84" y="1" width="2" height="1" fill="#FF85A7"/>
+  <rect x="84" y="0" width="1" height="1" fill="#FF5C8A"/>
+  <rect x="84" y="1" width="1" height="1" fill="#FF85A7"/>
+  <rect x="85" y="1" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-left">
+  <rect x="92" y="0" width="2" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="92" y="0" width="2" height="1" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-center">
+  <rect x="100" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="100" y="0" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-right">
+  <rect x="107" y="0" width="2" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="107" y="0" width="2" height="1" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-bottomleft">
+  <rect x="115" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="115" y="0" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="116" y="1" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-bottom">
+  <rect x="123" y="0" width="1" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="123" y="0" width="1" height="2" fill="#FF5C8A"/>
+</g>
+<g id="bar-active-bottomright">
+  <rect x="130" y="0" width="2" height="2" fill="#000000" fill-opacity="0.004"/>
+  <rect x="130" y="0" width="2" height="1" fill="#FF5C8A"/>
+  <rect x="130" y="1" width="1" height="1" fill="#FF5C8A"/>
+</g>
+<g id="hint-bar-size">
+  <rect x="138" y="0" width="6" height="6" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hint-stretch-borders">
+  <rect x="150" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+</svg>

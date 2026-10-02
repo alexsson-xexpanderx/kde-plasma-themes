@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2000" height="10" viewBox="0 0 2000 10" shape-rendering="crispEdges">
+<g id="normal-topleft">
+  <rect x="0" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-top">
+  <rect x="10" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-topright">
+  <rect x="17" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-left">
+  <rect x="27" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-center">
+  <rect x="37" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-right">
+  <rect x="44" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-bottomleft">
+  <rect x="54" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-bottom">
+  <rect x="64" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-bottomright">
+  <rect x="71" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-top-margin">
+  <rect x="81" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-right-margin">
+  <rect x="88" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-bottom-margin">
+  <rect x="100" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="normal-hint-left-margin">
+  <rect x="107" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-topleft">
+  <rect x="119" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="121" y="0" width="2" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="120" y="1" width="3" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="119" y="2" width="4" height="2" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-top">
+  <rect x="129" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="129" y="0" width="1" height="4" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-topright">
+  <rect x="136" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="136" y="0" width="2" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="136" y="1" width="3" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="136" y="2" width="4" height="2" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-left">
+  <rect x="146" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="146" y="0" width="4" height="1" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-center">
+  <rect x="156" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="156" y="0" width="1" height="1" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-right">
+  <rect x="163" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="163" y="0" width="4" height="1" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-bottomleft">
+  <rect x="173" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="173" y="0" width="4" height="2" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="174" y="2" width="3" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="175" y="3" width="2" height="1" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-bottom">
+  <rect x="183" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="183" y="0" width="1" height="4" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-bottomright">
+  <rect x="190" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="190" y="0" width="4" height="2" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="190" y="2" width="3" height="1" fill="#312D4A" fill-opacity="0.6"/>
+  <rect x="190" y="3" width="2" height="1" fill="#312D4A" fill-opacity="0.6"/>
+</g>
+<g id="hover-hint-top-margin">
+  <rect x="200" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-right-margin">
+  <rect x="207" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-bottom-margin">
+  <rect x="219" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hover-hint-left-margin">
+  <rect x="226" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-topleft">
+  <rect x="238" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="240" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="239" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="240" y="1" width="2" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="238" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="239" y="2" width="3" height="2" fill="#FF5C8A" fill-opacity="0.25"/>
+</g>
+<g id="pressed-top">
+  <rect x="248" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="248" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="248" y="1" width="1" height="3" fill="#FF5C8A" fill-opacity="0.25"/>
+</g>
+<g id="pressed-topright">
+  <rect x="255" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="255" y="0" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="255" y="1" width="2" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="257" y="1" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="255" y="2" width="3" height="2" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="258" y="2" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="pressed-left">
+  <rect x="265" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="265" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="266" y="0" width="3" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+</g>
+<g id="pressed-center">
+  <rect x="275" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="275" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+</g>
+<g id="pressed-right">
+  <rect x="282" y="0" width="4" height="1" fill="#000000" fill-opacity="0.004"/>
+  <rect x="282" y="0" width="3" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="285" y="0" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="pressed-bottomleft">
+  <rect x="292" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="292" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="293" y="0" width="3" height="2" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="293" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="294" y="2" width="2" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="294" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="pressed-bottom">
+  <rect x="302" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="302" y="0" width="1" height="3" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="302" y="3" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="pressed-bottomright">
+  <rect x="309" y="0" width="4" height="4" fill="#000000" fill-opacity="0.004"/>
+  <rect x="309" y="0" width="3" height="2" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="312" y="0" width="1" height="2" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="309" y="2" width="2" height="1" fill="#FF5C8A" fill-opacity="0.25"/>
+  <rect x="311" y="2" width="1" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+  <rect x="309" y="3" width="2" height="1" fill="#FF5C8A" fill-opacity="0.85"/>
+</g>
+<g id="pressed-hint-top-margin">
+  <rect x="319" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-right-margin">
+  <rect x="326" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-bottom-margin">
+  <rect x="338" y="0" width="1" height="4" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="pressed-hint-left-margin">
+  <rect x="345" y="0" width="6" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+<g id="hint-stretch-borders">
+  <rect x="357" y="0" width="1" height="1" fill="#000000" fill-opacity="0.004"/>
+</g>
+</svg>
