@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+# retrofetch -- a system fetch for the Retrograde theme.
+#   retrofetch            your system
+#   RETROFETCH_DEMO=1     the theme's own facts, for screenshots
+logo=(
+    $' \e[38;2;147;124;86m▄\e[0m\e[38;2;147;124;86m\e[48;2;255;214;133m▀\e[0m\e[38;2;147;124;86m▄\e[0m      \e[38;2;235;203;224m▄\e[0m\e[38;2;235;203;224m▄\e[0m\e[38;2;235;203;224m▄\e[0m\e[38;2;235;203;224m▄\e[0m\e[38;2;188;146;178m▄\e[0m  \e[38;2;170;165;202m▀\e[0m       '
+    $'  \e[38;2;147;124;86m▀\e[0m    \e[38;2;255;158;192m▄\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;235;203;224m\e[48;2;255;158;192m▀\e[0m\e[38;2;188;146;178m\e[48;2;215;100;154m▀\e[0m\e[38;2;138;95;134m\e[48;2;215;100;154m▀\e[0m\e[38;2;106;42;104m▄\e[0m    \e[38;2;231;228;246m▄\e[0m  '
+    $'   \e[38;2;154;135;104m▄\e[0m\e[38;2;154;135;104m▄\e[0m\e[38;2;154;135;104m▄\e[0m\e[38;2;200;180;255m▄\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;200;180;255m▀\e[0m\e[38;2;255;158;192m\e[48;2;154;128;224m▀\e[0m\e[38;2;215;100;154m\e[48;2;154;128;224m▀\e[0m\e[38;2;215;100;154m\e[48;2;110;85;184m▀\e[0m\e[38;2;162;64;126m\e[48;2;110;85;184m▀\e[0m\e[38;2;174;101;129m▄\e[0m\e[38;2;154;135;104m▄\e[0m\e[38;2;154;135;104m▄\e[0m\e[38;2;154;135;104m▄\e[0m   '
+    $'\e[38;2;210;168;120m▄\e[0m\e[38;2;132;106;83m▀\e[0m\e[38;2;132;106;83m▀\e[0m   \e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;255;158;192m▀\e[0m\e[38;2;200;180;255m\e[48;2;215;100;154m▀\e[0m\e[38;2;154;128;224m\e[48;2;215;100;154m▀\e[0m\e[38;2;154;128;224m\e[48;2;215;100;154m▀\e[0m\e[38;2;154;128;224m\e[48;2;162;64;126m▀\e[0m\e[38;2;110;85;184m\e[48;2;162;64;126m▀\e[0m\e[38;2;74;55;138m\e[48;2;106;42;104m▀\e[0m\e[38;2;174;101;129m\e[48;2;188;95;114m▀\e[0m   \e[38;2;132;106;83m▀\e[0m\e[38;2;132;106;83m▀\e[0m\e[38;2;210;168;120m▄\e[0m'
+    $' \e[38;2;210;168;120m▀\e[0m\e[38;2;210;168;120m▀\e[0m\e[38;2;210;168;120m▄\e[0m\e[38;2;210;168;120m▄\e[0m\e[38;2;246;215;154m▄\e[0m\e[38;2;215;100;154m\e[48;2;246;215;154m▀\e[0m\e[38;2;255;158;192m\e[48;2;255;240;200m▀\e[0m\e[38;2;255;158;192m\e[48;2;255;240;200m▀\e[0m\e[38;2;255;158;192m\e[48;2;255;240;200m▀\e[0m\e[38;2;255;158;192m\e[48;2;255;240;200m▀\e[0m\e[38;2;215;100;154m\e[48;2;255;240;200m▀\e[0m\e[38;2;215;100;154m\e[48;2;255;240;200m▀\e[0m\e[38;2;215;100;154m\e[48;2;255;240;200m▀\e[0m\e[38;2;162;64;126m\e[48;2;255;240;200m▀\e[0m\e[38;2;162;64;126m\e[48;2;255;240;200m▀\e[0m\e[38;2;106;42;104m\e[48;2;255;240;200m▀\e[0m\e[38;2;106;42;104m\e[48;2;255;240;200m▀\e[0m\e[38;2;188;95;114m\e[48;2;246;215;154m▀\e[0m\e[38;2;246;215;154m▄\e[0m\e[38;2;210;168;120m▄\e[0m\e[38;2;210;168;120m▄\e[0m\e[38;2;210;168;120m▀\e[0m\e[38;2;210;168;120m▀\e[0m '
+    $'       \e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;74;55;138m▀\e[0m\e[38;2;246;215;154m\e[48;2;174;101;129m▀\e[0m\e[38;2;246;215;154m\e[48;2;174;101;129m▀\e[0m       '
+    $' \e[38;2;195;166;255m▀\e[0m      \e[38;2;74;55;138m▀\e[0m\e[38;2;74;55;138m▀\e[0m\e[38;2;74;55;138m\e[48;2;90;58;98m▀\e[0m\e[38;2;74;55;138m\e[48;2;90;58;98m▀\e[0m\e[38;2;74;55;138m\e[48;2;90;58;98m▀\e[0m\e[38;2;74;55;138m\e[48;2;90;58;98m▀\e[0m\e[38;2;74;55;138m\e[48;2;90;58;98m▀\e[0m\e[38;2;174;101;129m▀\e[0m\e[38;2;174;101;129m▀\e[0m        '
+    $'                      \e[38;2;139;227;247m▀\e[0m  '
+)
+keys=('\e[38;2;255;92;138m' '\e[38;2;255;130;102m' '\e[38;2;255;174;92m' '\e[38;2;255;214;133m' '\e[38;2;142;230;176m' '\e[38;2;139;227;247m' '\e[38;2;137;180;250m' '\e[38;2;195;166;255m')
+
+if [ -n "$RETROFETCH_DEMO" ]; then
+    who="retrograde"; host="observatory"
+    rows=("theme|Retrograde" "style|pixel corners, hard shadows" "windows|KWin, planet buttons"
+          "font|Departure Mono" "conky|Orrery, dashboard" "cursor|Retrograde pixel"
+          "palette|dusk")
+else
+    who="${USER:-$(id -un)}"; host="$(hostname 2>/dev/null || cat /etc/hostname)"
+    os="$(. /etc/os-release 2>/dev/null; echo "${PRETTY_NAME:-$(uname -s)}")"
+    up="$(uptime -p 2>/dev/null | sed 's/^up //')"
+    plasma="$(plasmashell --version 2>/dev/null | awk '{print $2}')"
+
+    # The CPU's model without the trademarks and the clock, and its threads.
+    cpu="$(sed -n 's/^model name[[:space:]]*: //p' /proc/cpuinfo | head -n 1 \
+           | sed -e 's/(R)//g; s/(TM)//g; s/ CPU//; s/ @.*//; s/ [0-9]*-Core Processor//' \
+                 -e 's/ Processor//; s/  */ /g; s/ *$//')"
+    cpu="${cpu:-unknown} ($(nproc 2>/dev/null || echo ?))"
+
+    # The GPU's name as its driver gives it; lspci's where glxinfo is missing.
+    gpu="$(glxinfo -B 2>/dev/null | sed -n 's/^OpenGL renderer string: //p' | sed 's/ (.*//')"
+    if [ -z "$gpu" ] && command -v lspci >/dev/null; then
+        gpu="$(lspci -mm 2>/dev/null | awk -F'"' '/VGA|3D|Display/ {
+            v = $4; d = $6
+            if (v ~ /^Advanced Micro Devices/) v = "AMD"
+            else if (v ~ /^Intel/) v = "Intel"
+            else if (v ~ /^NVIDIA/) v = "NVIDIA"
+            if (match(d, /\[.*\]/)) d = substr(d, RSTART + 1, RLENGTH - 2)
+            print v " " d; exit }')"
+    fi
+
+    # Memory in use, as free(1) counts it, of the total.
+    ram="$(awk '/^MemTotal:/ {t = $2} /^MemAvailable:/ {a = $2}
+                END {printf "%.1f GiB / %.1f GiB", (t - a) / 1048576, t / 1048576}' /proc/meminfo)"
+
+    rows=("os|$os" "kernel|$(uname -r)" "uptime|$up" "shell|$(basename "${SHELL:-sh}")"
+          "desktop|Plasma ${plasma:-?}" "theme|Retrograde"
+          "cpu|$cpu" "gpu|${gpu:-unknown}" "ram|$ram")
+fi
+
+# The colour bar: the eight colours over their bright versions, one half
+# block each with a gap between, centred under the planet.
+bar="     "
+for i in 0 1 2 3 4 5 6 7; do
+    [ "$i" -gt 0 ] && bar+=" "
+    printf -v square '\e[3%dm\e[10%dm▀\e[0m' "$i" "$i"
+    bar+="$square"
+done
+bar+="     "
+
+# The text: who and where, a rule under it, then a key and a value a row.
+printf -v line '\e[1m\e[38;2;255;92;138m%s\e[0m\e[38;2;170;165;202m@\e[1m\e[38;2;139;227;247m%s\e[0m' "$who" "$host"
+text=("$line")
+printf -v line '\e[38;2;67;62;98m%s\e[0m' "$(printf '%*s' $(( ${#who} + ${#host} + 1 )) '' | tr ' ' '-')"
+text+=("$line")
+for i in "${!rows[@]}"; do
+    IFS='|' read -r k v <<< "${rows[$i]}"
+    printf -v line '%b%-9s\e[0m%s' "${keys[$(( i % ${#keys[@]} ))]}" "$k" "$v"
+    text+=("$line")
+done
+
+# The planet with the bar right under it, centred against the text.
+art=("${logo[@]}" "$bar")
+lines=$(( ${#text[@]} > ${#art[@]} ? ${#text[@]} : ${#art[@]} ))
+top=$(( (lines - ${#art[@]}) / 2 ))
+printf '\n'
+for (( i = 0; i < lines; i++ )); do
+    a=$(( i - top ))
+    if (( a >= 0 && a < ${#art[@]} )); then left="${art[$a]}"; else left="                         "; fi
+    printf '  %s  %s\n' "$left" "${text[$i]:-}"
+done
+printf '\n'

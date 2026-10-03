@@ -1,0 +1,33 @@
+[kdeglobals][KDE]
+widgetStyle=Breeze
+
+[kdeglobals][General]
+ColorScheme=Retrograde
+font=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[kdeglobals][WM]
+activeFont=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+
+[kdeglobals][Icons]
+Theme=Retrograde
+
+[plasmarc][Theme]
+name=Retrograde
+
+[Wallpaper]
+Image=Retrograde
+
+[kcminputrc][Mouse]
+cursorTheme=Retrograde-cursors
+
+[kwinrc][org.kde.kdecoration2]
+library=org.kde.kwin.aurorae.v2
+theme=__aurorae__svg__Retrograde
+
+[ksplashrc][KSplash]
+Theme=Retrograde

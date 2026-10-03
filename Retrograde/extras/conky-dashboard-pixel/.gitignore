@@ -1,0 +1,14 @@
+# Collector output, regenerated on a timer and machine-specific.
+.updates.txt
+.weather.txt
+.updates.txt.*
+.weather-*
+
+# What start_conky.sh saw at the last start, and conky's output.
+.start.log
+
+# OpenWeatherMap API key -- never commit this
+.owm_key
+
+__pycache__/
+*.pyc
