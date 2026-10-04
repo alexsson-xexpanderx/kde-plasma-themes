@@ -96,7 +96,9 @@ Test in a throwaway session instead:
   `build_fonts.py`: 12 pt, Konsole too, and 10 pt for the smallest text. A
   pixel font is sharp only where a font pixel is a whole number of screen
   pixels (em 11 px; at 115%, 14.35 pt is 22 px), but the user found 14.35 pt
-  too big and chose 12 pt, softer. It has no bold, so nothing is set bold.
+  too big and chose 12 pt, softer. `font-size.sh` reads a machine's scale
+  and uses a sharp size within 1.5 pt of 12 (13.03 pt on the user's 190%
+  laptop), else 12. It has no bold, so nothing is set bold.
   Plasma 6.7 applies a global theme's fonts only if its defaults have
   `activeFont` under `[kdeglobals][General]` (its check looks in the wrong
   groups), so keep that extra key.

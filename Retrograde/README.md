@@ -39,17 +39,15 @@ Then pick it in System Settings → Colors & Themes → Login Screen (SDDM).
 
 ## Font size
 
-The theme uses Departure Mono at 12 pt. It's a pixel font, so it looks
-sharpest at these sizes, if you'd rather have crisp than small (System
-Settings → Text & Fonts):
+Departure Mono is a pixel font, so it's sharpest at certain sizes, and which
+ones depends on your display scale. Let a script pick:
 
-| Scale | Size |
-|---|---|
-| 100% | 16.5 pt |
-| 115% | 14.35 pt |
-| 125% | 13.2 pt |
-| 150% | 11 pt |
-| 200% | 16.5 pt |
+```bash
+./font-size.sh
+```
+
+It uses a sharp size if there's one close to 12 pt, and plain 12 pt if not.
+`--show` only shows what it would pick, `--size 13` starts from 13 pt.
 
 ## Conkies
 
