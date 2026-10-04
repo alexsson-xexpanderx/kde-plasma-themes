@@ -47,6 +47,7 @@ ones depends on your display scale. Let a script pick:
 ```
 
 It uses a sharp size if there's one close to 12 pt, and plain 12 pt if not.
+`./install.sh --apply` runs it for you.
 `--show` only shows what it would pick, `--size 13` starts from 13 pt.
 
 ## Conkies

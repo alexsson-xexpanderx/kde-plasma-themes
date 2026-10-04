@@ -25,13 +25,18 @@ done
 
 # The main screen's scale, as KDE has it.
 if [ -z "$scale" ] && command -v kscreen-doctor >/dev/null; then
-    scale="$(kscreen-doctor -o 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | awk '
+    scale="$(timeout 5 kscreen-doctor -o 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | awk '
         /^Output:/          { on = 0; main = 0 }
         /^[[:space:]]+enabled$/ { on = 1 }
         /priority 1$/       { main = 1 }
         /Scale:/            { if (on && main) { print $2; exit }
                               if (on && first == "") first = $2 }
         END                 { if (first != "") print first }' | head -n 1)"
+fi
+# Or KWin's saved settings, outside a running Plasma session.
+config="${XDG_CONFIG_HOME:-$HOME/.config}/kwinoutputconfig.json"
+if [ -z "$scale" ] && [ -f "$config" ]; then
+    scale="$(grep -o '"scale": *[0-9.]*' "$config" | head -n 1 | grep -o '[0-9.]*$' || true)"
 fi
 if [ -z "$scale" ]; then
     echo "Could not read the display scale; using 1 (100%). Pass --scale to set it." >&2

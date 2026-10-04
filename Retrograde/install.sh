@@ -2,7 +2,8 @@
 # Install Retrograde for the current user.
 #
 #   ./install.sh            copy the theme into ~/.local/share
-#   ./install.sh --apply    and switch to it (same as picking it in System Settings)
+#   ./install.sh --apply    and switch to it, with the font size that suits
+#                           this screen (see ./font-size.sh)
 #
 # Only paths named Retrograde under ~/.local/share are written; nothing else is
 # touched.  Run ./uninstall.sh to take them out again.
@@ -66,9 +67,14 @@ fi
 echo
 if [ "$apply" = yes ]; then
     plasma-apply-lookandfeel --apply Retrograde
+    # The theme sets 12 pt; use the size that is sharp on this screen instead.
+    echo
+    "$here/font-size.sh" || echo "  (could not set the font size; run ./font-size.sh)"
+    echo
     echo "Retrograde is applied.  Window decorations and the cursor take full"
     echo "effect in newly opened windows; log out and in to see the splash."
 else
     echo "Installed.  Pick Retrograde in System Settings > Colors & Themes >"
     echo "Global Theme, or run:  plasma-apply-lookandfeel --apply Retrograde"
+    echo "Then ./font-size.sh sets the font size that suits this screen."
 fi
