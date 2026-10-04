@@ -72,13 +72,19 @@ Rectangle {
 
     // ---- The sky: the wallpaper's art enlarged by a whole number, the shape
     // nearest the screen's, cropped at the top and sides.
-    readonly property var arts: [ { w: 860, h: 360, file: "images/sky-860x360.png" }, { w: 854, h: 360, file: "images/sky-854x360.png" }, { w: 1280, h: 360, file: "images/sky-1280x360.png" }, { w: 640, h: 360, file: "images/sky-640x360.png" }, { w: 640, h: 400, file: "images/sky-640x400.png" }, { w: 683, h: 384, file: "images/sky-683x384.png" } ]
+    readonly property var arts: [ { w: 640, h: 400, file: "images/sky-640x400.png" }, { w: 683, h: 384, file: "images/sky-683x384.png" }, { w: 480, h: 300, file: "images/sky-480x300.png" }, { w: 560, h: 350, file: "images/sky-560x350.png" }, { w: 564, h: 376, file: "images/sky-564x376.png" }, { w: 854, h: 360, file: "images/sky-854x360.png" }, { w: 576, h: 360, file: "images/sky-576x360.png" }, { w: 576, h: 384, file: "images/sky-576x384.png" }, { w: 534, h: 334, file: "images/sky-534x334.png" }, { w: 860, h: 360, file: "images/sky-860x360.png" }, { w: 640, h: 360, file: "images/sky-640x360.png" }, { w: 549, h: 343, file: "images/sky-549x343.png" }, { w: 1280, h: 360, file: "images/sky-1280x360.png" } ]
 
+    // The art of the nearest shape, and of those the one that, enlarged by a
+    // whole number to cover the screen, has least to crop, then the finest:
+    // the one the desktop's wallpaper is made from.
     function nearestArt() {
-        var best = arts[0], gap = 1e9, shape = Math.log(width / Math.max(1, height))
+        var best = arts[0], score = 1e9, shape = Math.log(width / Math.max(1, height))
         for (var i = 0; i < arts.length; i++) {
-            var g = Math.abs(Math.log(arts[i].w / arts[i].h) - shape)
-            if (g < gap) { gap = g; best = arts[i] }
+            var a = arts[i]
+            var k = Math.max(1, Math.ceil(Math.max(width / a.w, height / a.h)))
+            var crop = a.w * k * a.h * k / Math.max(1, width * height) - 1
+            var s = Math.round(Math.abs(Math.log(a.w / a.h) - shape) * 100) * 10 + crop + k * 0.001
+            if (s < score) { score = s; best = a }
         }
         return best
     }

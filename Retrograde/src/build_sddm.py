@@ -31,9 +31,8 @@ ICONS = HERE.parent / "theme" / "icons" / P.NAME / "apps" / "scalable"
 FRAME_PX = 2         # screen pixels to one pixel of a frame
 ICON_PX = 48         # the power icons: their 24-cell grid at two pixels a cell
 
-# One piece of art per screen shape; the greeter picks the nearest shape.
-ARTS = [(3440, 1440, 4), (2560, 1080, 3), (5120, 1440, 4), (1920, 1080, 3),
-        (1920, 1200, 3), (1366, 768, 2)]
+# The wallpaper's art for every size it is made in, each once.
+ARTS = sorted({(-(-wd // sc), -(-ht // sc)): (wd, ht, sc) for wd, ht, sc in W.SIZES}.values())
 
 SMALL = dict(corner=4, steps=list(BP.STEPS_SMALL))
 RAISED = dict(bevel_top=("#FFFFFF", 0.07), bevel_bottom=(P.VOID, 0.55, 1))
@@ -180,11 +179,17 @@ Rectangle {
     // nearest the screen's, cropped at the top and sides.
     readonly property var arts: [ {{ARTS}} ]
 
+    // The art of the nearest shape, and of those the one that, enlarged by a
+    // whole number to cover the screen, has least to crop, then the finest:
+    // the one the desktop's wallpaper is made from.
     function nearestArt() {
-        var best = arts[0], gap = 1e9, shape = Math.log(width / Math.max(1, height))
+        var best = arts[0], score = 1e9, shape = Math.log(width / Math.max(1, height))
         for (var i = 0; i < arts.length; i++) {
-            var g = Math.abs(Math.log(arts[i].w / arts[i].h) - shape)
-            if (g < gap) { gap = g; best = arts[i] }
+            var a = arts[i]
+            var k = Math.max(1, Math.ceil(Math.max(width / a.w, height / a.h)))
+            var crop = a.w * k * a.h * k / Math.max(1, width * height) - 1
+            var s = Math.round(Math.abs(Math.log(a.w / a.h) - shape) * 100) * 10 + crop + k * 0.001
+            if (s < score) { score = s; best = a }
         }
         return best
     }

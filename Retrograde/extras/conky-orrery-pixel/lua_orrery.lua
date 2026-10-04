@@ -37,6 +37,11 @@ motion = 1.0
 -- scales from this; if the conky window is smaller, the widget shrinks to fit.
 widget_size = 640
 
+-- Text size, against what widget_size gives it: 1.20 is a fifth larger. The
+-- font is set at whole multiples of its pixel grid (see font_em), so the text
+-- grows in steps rather than smoothly.
+font_scale = 1.00
+
 -- Size of one art pixel, in screen pixels. The Retrograde wallpaper is painted
 -- about 360 art pixels tall whatever the screen, so the match is your screen's
 -- height divided by 360: 4 on a 1440-pixel-tall screen, 3 at 1080, 6 at 2160.
@@ -520,6 +525,11 @@ local FOCAL = 1240
 local camera = mat_identity()
 local model = mat_identity()      -- camera * (whatever the current object is)
 local centre_x, centre_y, unit = 0, 0, 1
+
+-- The unit for text: the widget's, times font_scale.
+local function text_unit()
+  return unit * (font_scale or 1)
+end
 
 local function set_model(m)
   model = m and mat_mul(camera, m) or camera
@@ -1160,7 +1170,7 @@ local function draw_hoop_labels(cr, hoop, t, radius, labels, count, current, siz
     local before = label_points[(i - 2) % count + 1]
     local after = label_points[i % count + 1]
     local live = (i == current)
-    local scale = (live and LIVE_SIZE * math.max(point[4], 1) or size * point[4]) * unit
+    local scale = (live and LIVE_SIZE * math.max(point[4], 1) or size * point[4]) * text_unit()
     local width, height = extent_for(cr, labels[i], scale, live)
 
     -- The tangent comes from the neighbours either side rather than from a
@@ -1439,9 +1449,10 @@ local function draw_readout(cr, middle, span, fraction, colour, caption, value, 
 
   local tx = centre_x + cos(middle) * (R_READOUT + 34) * unit
   local ty = centre_y + sin(middle) * (R_READOUT + 34) * unit
-  text_at(cr, tx, ty - 9 * unit, caption, 10 * unit, INK.captions,
+  local tu = text_unit()
+  text_at(cr, tx, ty - 9 * tu, caption, 10 * tu, INK.captions,
           share(OPACITY.captions, captions))
-  text_at(cr, tx, ty + 15 * unit, value, 21 * unit, colour,
+  text_at(cr, tx, ty + 15 * tu, value, 21 * tu, colour,
           share(0.92 * scale_of(name), mine), true)
 end
 
@@ -1561,7 +1572,7 @@ local function draw_function(cr, now, dt)
 
   -- The clock is drawn centred on the middle of the widget, ink box and all,
   -- and that box is what the labels are kept off.
-  local clock_w, clock_h = extent_for(cr, CLOCK_SAMPLE, sharp_size(CLOCK_SIZE * unit), false, font_clock)
+  local clock_w, clock_h = extent_for(cr, CLOCK_SAMPLE, sharp_size(CLOCK_SIZE * text_unit()), false, font_clock)
   clock_half_w, clock_half_h = clock_w / 2, clock_h / 2
 
   -- Monday-first, to match WEEKDAYS; os.date numbers Sunday 1.
@@ -1594,7 +1605,7 @@ local function draw_function(cr, now, dt)
   -- whole reason the renderer sorts text along with everything else.
   local x, y = project(0, 0, 0)
   drawing = "clock"
-  put_label(x, y, 0, os.date("%H:%M", floor(now)), CLOCK_SIZE * unit, 0,
+  put_label(x, y, 0, os.date("%H:%M", floor(now)), CLOCK_SIZE * text_unit(), 0,
             INK.clock, OPACITY.clock, false, font_clock, true)
 
   if PIXEL > 1 then

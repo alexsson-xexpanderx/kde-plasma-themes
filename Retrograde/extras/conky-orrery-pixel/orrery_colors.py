@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Colour editor for Conky Orrery, with a live preview.
+"""Colour and size editor for Conky Orrery, with a live preview.
 
     ./orrery_colors.py [path/to/lua_orrery.lua]
 
@@ -24,6 +24,7 @@ it edits.
 """
 
 import colorsys
+import math
 import os
 import queue
 import re
@@ -120,9 +121,24 @@ SHOWN_BY = {
     "HTML_gpu": "enable_graphic_card_temperature_sensor",
 }
 
+# Sliders: setting, label, range, step, and how the value is shown.
 NUMBERS = [
-    ("depth_fade", "Far side fade", 0.05, 1.0),
+    ("widget_size", "Orrery size", 400, 1400, 10, "%d px"),
+    ("font_scale", "Text size", 0.6, 2.0, 0.05, "%.2fx"),
+    ("depth_fade", "Far side fade", 0.05, 1.0, 0.01, "%.2f"),
 ]
+SHOWN = {key: shown for key, _, _, _, _, shown in NUMBERS}
+STEP = {key: step for key, _, _, _, step, _ in NUMBERS}
+
+# The conky window is sized in start_conky_orrery. It is kept in step with
+# widget_size, as much bigger as the shipped 820 is than 640, so the readouts
+# written outside the hoops still fit.
+START_SCRIPT = os.path.join(HERE, "start_conky_orrery")
+WINDOW_RE = re.compile(r'^(local size = )([0-9]+)', re.M)
+
+
+def window_for(widget_size):
+    return int(math.ceil(widget_size * 820 / 640 / 2.0)) * 2
 
 # Every element but Heat has an opacity of its own, named after its colour and
 # edited under the picker while the element is selected. Heat is a colour that
@@ -152,7 +168,7 @@ BACKDROPS = [("Dark", "0B0E17"), ("Slate", "2B303B"), ("Grey", "6E7480"), ("Ligh
 COLOUR_RE = {k: re.compile(r'^(\s*%s\s*=\s*")(#?[0-9A-Fa-f]{6})(")' % k, re.M)
              for k in ELEMENT}
 NUMBER_RE = {k: re.compile(r'^(\s*%s\s*=\s*)(-?[0-9]*\.?[0-9]+)' % k, re.M)
-             for k in [n for n, _, _, _ in NUMBERS] + list(OPACITY_KEY.values())}
+             for k in [n for n, *_ in NUMBERS] + list(OPACITY_KEY.values())}
 SWITCH_RE = {k: re.compile(r'^(\s*%s\s*=\s*")([A-Za-z]+)(")' % k, re.M)
              for k, _, _ in SWITCHES}
 
@@ -199,8 +215,10 @@ def apply_settings(text, values):
                 return m.group(0)
         except ValueError:
             pass
-        # Two decimals is how the file is already written, and the same width
-        # for every value in range, so the comment after it keeps its column.
+        # Written as the file has it: whole numbers stay whole (widget_size),
+        # the rest keep two decimals, so the comment after it keeps its column.
+        if "." not in m.group(2):
+            return m.group(1) + ("%d" % round(wanted))
         return m.group(1) + ("%.2f" % wanted)
 
     def replace_switch(m, wanted):
@@ -247,7 +265,7 @@ def spotlight_text(text, values, key):
 
     This is only ever rendered, never saved; Apply writes candidate_text()."""
     picked = dict(values)
-    for number in NUMBER_RE:
+    for number in list(OPACITY_KEY.values()) + ["depth_fade"]:
         if number in picked:
             picked[number] = 1.0
     switch = SHOWN_BY.get(key)
@@ -769,7 +787,7 @@ class Editor(tk.Tk):
     def __init__(self, script_path):
         super().__init__()
         self.script_path = script_path
-        self.title("Conky Orrery colours (pixel)")
+        self.title("Conky Orrery settings (pixel)")
         self.configure(bg=BG)
         self.resizable(False, False)
 
@@ -933,12 +951,12 @@ class Editor(tk.Tk):
                 row=i // 3, column=i % 3, padx=(0 if i % 3 == 0 else 7, 0), pady=(0, 7))
         row += 1
 
-        row = self._section(left, "Depth", row)
+        row = self._section(left, "Size and depth", row)
         sliders = self._card(left, row, pad=14)
         row += 1
         self.sliders = {}
         self.slider_values = {}
-        for i, (key, label, low, high) in enumerate(NUMBERS):
+        for i, (key, label, low, high, *_) in enumerate(NUMBERS):
             head = tk.Frame(sliders, bg=SURFACE)
             head.grid(row=i * 2, column=0, sticky="ew", pady=(0 if i == 0 else 8, 0))
             tk.Label(head, text=label, bg=SURFACE, fg=TEXT, font=F_BODY).pack(side="left")
@@ -1024,8 +1042,8 @@ class Editor(tk.Tk):
             live = switched_on(self.values, SWITCH_PARENT.get(key))
             switch.show(self.values.get(key, False), live)
             self.switch_labels[key].configure(fg=TEXT if live else FAINT)
-        for key, _, _, _ in NUMBERS:
-            self.slider_values[key].configure(text="%.2f" % self.values.get(key, 0))
+        for key, *_ in NUMBERS:
+            self.slider_values[key].configure(text=SHOWN[key] % self.values.get(key, 0))
         opacity_key = OPACITY_KEY.get(self.selected)
         if opacity_key in self.values:
             self.opacity_note.pack_forget()
@@ -1135,8 +1153,9 @@ class Editor(tk.Tk):
 
     def set_number(self, key, value):
         self.end_spotlight()
+        value = round(round(value / STEP[key]) * STEP[key], 2)
         self.values[key] = value
-        self.slider_values[key].configure(text="%.2f" % value)
+        self.slider_values[key].configure(text=SHOWN[key] % value)
         self.request_render()
 
     def set_backdrop(self, value):
@@ -1165,7 +1184,7 @@ class Editor(tk.Tk):
     def revert(self):
         self.end_spotlight()
         self.values = dict(self.saved)
-        for key, _, _, _ in NUMBERS:
+        for key, *_ in NUMBERS:
             self.sliders[key].set(self.values.get(key, 0))
         self.picker.set_hex(self.values[self.selected])
         self.refresh()
@@ -1263,7 +1282,24 @@ class Editor(tk.Tk):
             return False
         self.original_text = self.candidate_text()
         self.saved = dict(self.values)
+        self.fit_window()
         return True
+
+    def fit_window(self):
+        """Size the conky window for the widget, so a bigger orrery is not
+        shrunk to fit the old window."""
+        if "widget_size" not in self.values or not os.path.exists(START_SCRIPT):
+            return
+        try:
+            with open(START_SCRIPT, encoding="utf-8") as handle:
+                text = handle.read()
+            wanted = window_for(self.values["widget_size"])
+            new = WINDOW_RE.sub(lambda m: m.group(1) + str(wanted), text, count=1)
+            if new != text:
+                with open(START_SCRIPT, "w", encoding="utf-8") as handle:
+                    handle.write(new)
+        except OSError as problem:
+            messagebox.showerror("Could not resize the window", str(problem), parent=self)
 
     def apply(self):
         if not self.write():

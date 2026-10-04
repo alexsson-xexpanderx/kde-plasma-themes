@@ -20,4 +20,4 @@ At the top of `lua_orrery.lua`:
 - `pixel_size`: your screen height divided by 360 (4 at 1440p, 3 at 1080p)
 - `font_name` and `font_em`: the font and its pixel size (0 for a normal font)
 
-To change the colours, run `./orrery_colors.py`.
+To change the colours, the size and the text size, run `./orrery_colors.py`.

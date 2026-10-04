@@ -3,11 +3,11 @@
 A dark pixel-art theme for KDE Plasma 6: a dusk sky over an observatory,
 planets for window buttons and a sunset stripe on the active window.
 
-![Retrograde](screenshots/desktop.jpg)
+![Retrograde](screenshots/desktop.png)
 
 ## What's in it
 
-- Wallpaper in ten sizes, ultrawide included
+- Wallpaper in 17 sizes, ultrawide and laptops included
 - Window decoration, Plasma style and colours
 - Pixel-art icons and cursors
 - Departure Mono, a pixel font
@@ -15,7 +15,7 @@ planets for window buttons and a sunset stripe on the active window.
 - Konsole colours and `retrofetch`
 - Pixel versions of Conky Orrery and conky-dashboard
 
-![Splash screen](screenshots/splash.jpg)
+![Splash screen](screenshots/splash.png)
 
 ## Install
 
@@ -62,7 +62,7 @@ login:
 Leave out `--start` if you don't want them running right away.
 `--remove` takes them out of autostart again.
 
-![Conkies](screenshots/conkies-pixel.png)
+![Conkies](screenshots/desktop-clean.png)
 
 ## Konsole
 

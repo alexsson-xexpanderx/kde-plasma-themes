@@ -16,7 +16,9 @@ panel doesn't show up, look in `.start.log` in this folder.
 
 ## Settings
 
-At the top of `lua/dashboard.lua`:
+To change the panel's width and text size, run `./dashboard_settings.py`.
+
+The rest is at the top of `lua/dashboard.lua`:
 
 - `pixel_size`: your screen height divided by 360 (4 at 1440p, 3 at 1080p)
 - `bg_alpha`: background opacity, from 0 to 1
