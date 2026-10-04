@@ -242,9 +242,9 @@ def splash_qml():
     }
 
 
-# One font at one size everywhere, titles and small print included: the
-# pixel font's only sharp size that reads (see build_fonts).
+# One font everywhere, at one size but for the smallest text (see build_fonts).
 FONT = FN.qfont()
+FONT_SMALL = FN.qfont(FN.SMALL)
 
 
 def defaults():
@@ -257,7 +257,7 @@ def defaults():
         "font=%s" % FONT,
         "menuFont=%s" % FONT,
         "toolBarFont=%s" % FONT,
-        "smallestReadableFont=%s" % FONT,
+        "smallestReadableFont=%s" % FONT_SMALL,
         "fixed=%s" % FONT,
         # Not read from here.  Plasma (6.7) applies a theme's fonts only if
         # it finds activeFont under General or the rest under WM, though it

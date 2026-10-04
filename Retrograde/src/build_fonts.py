@@ -3,11 +3,11 @@ with its licence (SIL OFL 1.1) from src/fonts.
 
 A pixel font is sharp only at sizes where each of its pixels covers a whole
 number of screen pixels.  Departure Mono is drawn eleven pixels to the em, so
-on the 115% display this theme is made on it is sharp at 14.35 pt: 22 screen
-pixels, two to a font pixel.  At 12 pt the font's pixels fall between screen
-pixels and the strokes come out uneven and soft; the next sharp size down,
-7.17 pt, is too small to read.  It has one weight, so nothing is set bold:
-KDE would make the bold up by smearing it.
+on the 115% display this theme is made on it is sharp at 14.35 pt, two screen
+pixels to a font pixel (points(2)).  That read too big, so the theme uses
+12 pt, a little soft, Konsole included, with 10 pt for the smallest text.
+It has one weight, so nothing is set bold: KDE would make the bold up by
+smearing it.
 """
 
 import shutil
@@ -29,7 +29,9 @@ def points(n):
     return round(n * EM / SCALE * 72 / DPI, 4)
 
 
-SIZE = points(2)
+SIZE = 12        # the desktop's text
+SMALL = 10       # the smallest readable text
+TERMINAL = 12    # Konsole
 
 
 def qfont(size=SIZE):

@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Retrograde
-Font=Departure Mono,14.3478,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=Departure Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 UseFontLineChararacters=true
 
 [Cursor Options]

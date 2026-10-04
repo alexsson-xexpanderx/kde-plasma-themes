@@ -39,8 +39,9 @@ Then pick it in System Settings → Colors & Themes → Login Screen (SDDM).
 
 ## Font size
 
-Departure Mono only looks sharp at some sizes. The theme uses 14.35 pt, made
-for 115% scaling. On other scales, set it in System Settings → Text & Fonts:
+The theme uses Departure Mono at 12 pt. It's a pixel font, so it looks
+sharpest at these sizes, if you'd rather have crisp than small (System
+Settings → Text & Fonts):
 
 | Scale | Size |
 |---|---|
@@ -53,7 +54,14 @@ for 115% scaling. On other scales, set it in System Settings → Text & Fonts:
 ## Conkies
 
 The pixel conkies are in `extras/`, each with its own README. To start them at
-login, copy the files from `extras/autostart` to `~/.config/autostart`.
+login:
+
+```bash
+./install-conky.sh --start
+```
+
+Leave out `--start` if you don't want them running right away.
+`--remove` takes them out of autostart again.
 
 ![Conkies](screenshots/conkies-pixel.png)
 

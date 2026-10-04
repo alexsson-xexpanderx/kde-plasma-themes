@@ -114,7 +114,7 @@ def konsole_profile():
     return "\n".join([
         section("Appearance", {
             "ColorScheme": P.NAME,
-            "Font": FN.qfont(),
+            "Font": FN.qfont(FN.TERMINAL),
             "UseFontLineChararacters": "true",
         }),
         section("Cursor Options", {

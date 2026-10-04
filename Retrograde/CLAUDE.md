@@ -92,13 +92,14 @@ Test in a throwaway session instead:
   icons coloured sprites or conversions: the battery levels came out as mush
   that way. The build also converts this machine's installed apps' icons into `theme/`: the user
   wants everything Retrograde in the repository, not only in `~/.local/share`.
-- The font is Departure Mono (`src/fonts`, OFL, shipped unchanged) at one
-  size everywhere, 14.35 pt, set in `build_fonts.py`. A pixel font is sharp
-  only where a font pixel is a whole number of screen pixels: its em is 11 px,
-  so at 115% that is 22 px. The user saw 12 pt come out uneven. It has no
-  bold, so nothing is set bold. Plasma 6.7 applies a global theme's fonts only
-  if its defaults have `activeFont` under `[kdeglobals][General]` (its check
-  looks in the wrong groups), so keep that extra key.
+- The font is Departure Mono (`src/fonts`, OFL, shipped unchanged), set in
+  `build_fonts.py`: 12 pt, Konsole too, and 10 pt for the smallest text. A
+  pixel font is sharp only where a font pixel is a whole number of screen
+  pixels (em 11 px; at 115%, 14.35 pt is 22 px), but the user found 14.35 pt
+  too big and chose 12 pt, softer. It has no bold, so nothing is set bold.
+  Plasma 6.7 applies a global theme's fonts only if its defaults have
+  `activeFont` under `[kdeglobals][General]` (its check looks in the wrong
+  groups), so keep that extra key.
 - The login screen (`build_sddm.py`) is an SDDM theme for the Qt 6 greeter.
   The user's SDDM runs on X11 unscaled at 3440x1440, so its text is in whole
   ems at 1x and its frames are two pixels a cell. It is system-wide: never
