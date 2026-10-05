@@ -2301,14 +2301,22 @@ function conky_start_widgets()
 
     -- A surface on the window, made each frame.  Not conky_surface(): under
     -- XWayland its cached surface went stale, and the panel drew every frame
-    -- without any of it reaching the window, which stayed empty.
-    local surface = cairo_xlib_surface_create(conky_window.display,
-        conky_window.drawable, conky_window.visual, w, h)
+    -- without any of it reaching the window, which stayed empty.  Without an
+    -- X display (conky on Wayland) the Xlib call would segfault, so that case
+    -- takes conky's own surface, which conky keeps and frees itself.
+    local surface, own = nil, false
+    if conky_window.display and cairo_xlib_surface_create then
+        surface, own = cairo_xlib_surface_create(conky_window.display,
+            conky_window.drawable, conky_window.visual, w, h), true
+    elseif conky_surface then
+        surface = conky_surface()
+    end
+    if surface == nil then return end
 
     local cr = cairo_create(surface)
     local ok, err = pcall(draw_pixelated, cr, w, draw_h, alpha)
     cairo_destroy(cr)
-    cairo_surface_destroy(surface)
+    if own then cairo_surface_destroy(surface) end
 
     if not ok then
         io.stderr:write("conky-dashboard: draw failed: " .. tostring(err) .. "\n")

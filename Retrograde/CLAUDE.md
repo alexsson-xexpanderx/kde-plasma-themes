@@ -135,7 +135,12 @@ for the user's work area. The dashboard stays shown (`reveal = "always"`):
 XWayland sends conky enter and leave events with stale positions, and a hover
 panel hid itself and looked as if it had not started. It draws to a
 `cairo_xlib_surface_create` surface each frame, because conky's cached
-`conky_surface()` went stale under XWayland and the window stayed empty. To
+`conky_surface()` went stale under XWayland and the window stayed empty. Both
+configs set `output_backend = 'x11'`: conky 1.25 picks Wayland by default in a
+Wayland session, where the Xlib call segfaulted (the dashboard now falls back
+to `conky_surface()` there) and conky scales the drawing by 1.15, so the pixel
+blocks come out uneven. A nested `kwin_wayland --xwayland` on an Xvfb, with a
+`kwinoutputconfig.json` at scale 1.15, tests the Wayland side. To
 see what the live panel shows, capture its window read-only with `import
 -window <id>` on `DISPLAY=:1` (its `XAUTHORITY` is in `/proc/<pid>/environ`).
 

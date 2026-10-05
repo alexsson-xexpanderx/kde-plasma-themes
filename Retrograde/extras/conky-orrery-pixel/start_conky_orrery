@@ -13,6 +13,12 @@ local size = 820
 local fps = 20
 
 conky.config = {
+	-- X11, through XWayland on a Wayland desktop, which is what conky used
+	-- before 1.25 started picking Wayland by default there. The pixel grid in
+	-- lua_orrery.lua is XWayland's physical pixels; on Wayland conky scales
+	-- the drawing by the desktop's scale and the pixels come out uneven.
+	output_backend = 'x11',
+
 	background = false,
 	update_interval = 1 / fps,
 
