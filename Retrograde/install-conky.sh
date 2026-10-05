@@ -68,6 +68,22 @@ echo "Added to autostart:"
 echo "  $autostart/conky-orrery-pixel.desktop"
 echo "  $autostart/conky-dashboard-pixel.desktop"
 
+# Plasma's session restore brings back what was open at logout. The Orrery's
+# window is plain "conky", which Plasma matches to conky's own menu entry and
+# starts at login with no config: a third conky, the default one. Keep both
+# out of the saved session; autostart starts them anyway.
+if command -v kreadconfig6 >/dev/null && command -v kwriteconfig6 >/dev/null; then
+    excluded="$(kreadconfig6 --file ksmserverrc --group General --key excludeApps)"
+    list="$excluded"
+    for app in conky conky-dashboard; do
+        case ",$list," in *",$app,"*) ;; *) list="${list:+$list,}$app" ;; esac
+    done
+    if [ "$list" != "$excluded" ]; then
+        kwriteconfig6 --file ksmserverrc --group General --key excludeApps "$list"
+        echo "Left conky out of Plasma's saved session (excludeApps in ksmserverrc)."
+    fi
+fi
+
 # Other conkies starting at login would land on top of these.
 for f in "$autostart"/*.desktop; do
     case "$(basename -- "$f")" in conky-orrery-pixel.desktop|conky-dashboard-pixel.desktop) continue ;; esac

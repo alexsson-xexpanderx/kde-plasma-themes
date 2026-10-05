@@ -14,6 +14,9 @@ RAM, network, updates and power buttons.
 Stop the original dashboard first, since they sit in the same spot. If the
 panel doesn't show up, look in `.start.log` in this folder.
 
+Click an update row to update: Slackpkg opens [slackpkg-gui](slackpkg-gui/)
+(needs PyQt6), Sbopkg opens sbopkg in a terminal.
+
 ## Settings
 
 To change the panel's width and text size, run `./dashboard_settings.py`.

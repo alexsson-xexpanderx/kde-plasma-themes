@@ -143,6 +143,9 @@ blocks come out uneven. A nested `kwin_wayland --xwayland` on an Xvfb, with a
 `kwinoutputconfig.json` at scale 1.15, tests the Wayland side. conky 1.25
 also gives an undecorated window an empty input area, which made the panel
 click-through; the dashboard runs `clickable.py` once at start to reset it.
+`install-conky.sh` adds `conky,conky-dashboard` to `excludeApps` in
+`ksmserverrc`: Plasma's session restore matched the Orrery's plain `conky`
+window to conky's own `conky.desktop` and started a third, default conky.
 Clicks from XTest on the Xvfb under a nested KWin travel the whole way through
 KWin and XWayland, so that is where to test them. To
 see what the live panel shows, capture its window read-only with `import

@@ -171,10 +171,7 @@ local config = {
     --   script   path relative to this repository
     --   terminal open it in a terminal emulator instead of detaching silently
     update_actions = {
-        -- The package manager GUI is not part of this copy; it is launched
-        -- from the original dashboard's folder, and the row stays inert if it
-        -- is not there.
-        Slackpkg = { cmd = (os.getenv("HOME") or "") .. "/git/conky-dashboard/slackpkg-gui/slackpkg-gui" },
+        Slackpkg = { script = "slackpkg-gui/slackpkg-gui" },
         Sbopkg   = { script = "sbopkg_update.sh", terminal = true },
     },
 
