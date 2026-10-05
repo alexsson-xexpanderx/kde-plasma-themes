@@ -140,7 +140,11 @@ configs set `output_backend = 'x11'`: conky 1.25 picks Wayland by default in a
 Wayland session, where the Xlib call segfaulted (the dashboard now falls back
 to `conky_surface()` there) and conky scales the drawing by 1.15, so the pixel
 blocks come out uneven. A nested `kwin_wayland --xwayland` on an Xvfb, with a
-`kwinoutputconfig.json` at scale 1.15, tests the Wayland side. To
+`kwinoutputconfig.json` at scale 1.15, tests the Wayland side. conky 1.25
+also gives an undecorated window an empty input area, which made the panel
+click-through; the dashboard runs `clickable.py` once at start to reset it.
+Clicks from XTest on the Xvfb under a nested KWin travel the whole way through
+KWin and XWayland, so that is where to test them. To
 see what the live panel shows, capture its window read-only with `import
 -window <id>` on `DISPLAY=:1` (its `XAUTHORITY` is in `/proc/<pid>/environ`).
 

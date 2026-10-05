@@ -1346,6 +1346,7 @@ local ui = {
     width       = 0,        -- last known window size, for the mouse hook
     height      = 0,
     buttons     = {},       -- hit boxes rebuilt on every frame
+    clickable   = false,    -- clickable.py has been run for this window
 }
 
 local ARM_TIMEOUT = 4       -- seconds a confirmation stays armed
@@ -2285,6 +2286,14 @@ end
 
 function conky_start_widgets()
     if conky_window == nil then return end
+
+    -- conky 1.25 gives an undecorated window an empty input area, and the
+    -- panel turned click-through.  clickable.py gives the window its input
+    -- back; once per start, now that the window exists.  X11 only.
+    if not ui.clickable and conky_window.display then
+        ui.clickable = true
+        spawn_detached("python3 " .. shell_quote(BASE .. "/clickable.py"))
+    end
 
     local w, h = conky_window.width, conky_window.height
     ui.width, ui.height = w, h
