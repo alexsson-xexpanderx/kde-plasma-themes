@@ -52,9 +52,10 @@ local config = {
     -- 1.0 values; this is the only place to change them all at once.
     --
     -- It is the size wanted, not a promise: on a window too short to hold the
-    -- sections at this size, draw_panel steps it down (never below 1.0) until
-    -- they fit, so the same setting suits a 1395px work area and a 1048px one.
-    font_scale  = 1.25,
+    -- sections at this size, draw_panel steps it down (to three quarters of
+    -- it at most) until they fit, so the same setting suits a 1395px work
+    -- area and a 1036px one.
+    font_scale  = 1.00,
 
     -- Palette: the Retrograde theme's.  A lavender white for everything
     -- structural, the theme's pink as the one accent, coral at the hot end of
@@ -1851,7 +1852,12 @@ local function section_updates(cr, w, y, alpha, measure)
     local row_h = fs(UPDATE_ROW_H)
 
     for _, item in ipairs(stats.updates) do
-        local box = { x = PAD, y = y, w = w - PAD * 2, h = row_h - fs(5) }
+        -- On the pixel grid, as the dividers are: left to cairo, the rounded
+        -- box filled the pixel on the other side of each edge and sat a whole
+        -- pixel left of everything else in the panel.
+        local function snap(v) return math.floor(v / PIXEL + 0.5) * PIXEL end
+        local bx, by = snap(PAD), snap(y)
+        local box = { x = bx, y = by, w = snap(w - PAD) - bx, h = snap(y + row_h - fs(5)) - by }
         local command = action_for(item.name)
         local hovered = false
 
@@ -1873,7 +1879,7 @@ local function section_updates(cr, w, y, alpha, measure)
             tint, label = "warm", "?"
         end
 
-        local mid = y + box.h / 2
+        local mid = box.y + box.h / 2
         as_type(dot, cr, PAD + 13, mid, 3.5, tint, alpha)
         text(cr, item.name, PAD + 26, mid + fs(4.5),
              { size = 13, alpha = alpha,
@@ -1988,9 +1994,14 @@ end
 -- Panel
 --=============================================================================
 
--- Gap needed between sections, at scale 1.0, for one header's capitals to
--- clear the section above it.
-local MIN_GAP = 12
+-- Gap needed between sections, in screen pixels and not scaled: the headers
+-- are 11px at any scale.  A divider sits in the middle of the gap and the
+-- next header's capitals stand in its lower half, so half of it has to clear
+-- a capital and the divider's own pixel: at 12 a divider ran through NETWORK.
+local MIN_GAP = 28
+
+-- The window height the type scale was last fitted to.
+local fitted_h = nil
 
 local function set_type_scale(s)
     type_scale = math.floor(s * 100 + 0.5) / 100
@@ -2150,6 +2161,15 @@ local function draw_panel(cr, w, h, alpha)
         section_footer,
     }
 
+    -- A new height (the first frames come in a window conky has not sized
+    -- yet) fits again from the configured scale; at the same height the
+    -- scale only ever steps down, so a row that comes and goes cannot make
+    -- the type flicker between sizes.
+    if h ~= fitted_h then
+        fitted_h = h
+        set_type_scale(config.font_scale or 1)
+    end
+
     local content, shown, measured
     local function measure_flow()
         content, shown, measured = 0, 0, {}
@@ -2171,10 +2191,10 @@ local function draw_panel(cr, w, h, alpha)
     -- Too tall at this type scale: step it down until it fits.  A section's
     -- header is drawn with its baseline at the section's top, so its capitals
     -- stand in the gap above; a gap narrower than MIN_GAP lets them touch the
-    -- section before.  Only ever downwards, so content that comes and goes
-    -- (an update row, the weather) cannot make the type flicker between sizes.
-    local min_scale = math.min(1, config.font_scale or 1)
-    while room / gaps < fs(MIN_GAP) and type_scale > min_scale + 1e-6 do
+    -- section before.  A short screen (1080p) can take it down to three
+    -- quarters; the smallest text stays at the font's 11px either way.
+    local min_scale = 0.75 * math.min(1, config.font_scale or 1)
+    while room / gaps < MIN_GAP and type_scale > min_scale + 1e-6 do
         set_type_scale(math.max(min_scale, type_scale - 0.05))
         measure_flow()
         room = bottom - TOP - content
