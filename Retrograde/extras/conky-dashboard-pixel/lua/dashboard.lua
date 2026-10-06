@@ -2131,6 +2131,24 @@ local function clip_to_background(cr, w, h)
     cairo_clip(cr)
 end
 
+-- Where a section's ink begins and ends against the box it reports, so a
+-- divider can sit in the middle of the space the eye sees.  Measured from the
+-- box, it sat closer to the header below than to the captions above: a
+-- header's capitals stand above the section's top, and the vitals end in
+-- blank space under their captions.
+local HEADER_CAP = 7                    -- capital height of the 11px headers
+
+local function ink_above(section)
+    if section == section_vitals then return -6 end     -- the rings start lower
+    return HEADER_CAP
+end
+
+local function blank_below(section)
+    if section == section_vitals  then return fs(20) end -- under the captions
+    if section == section_weather then return 4 end      -- under the times
+    return 0
+end
+
 local function draw_panel(cr, w, h, alpha)
     -- With no background, an accent stripe along the edge marks the panel.
     -- The background itself is drawn by draw_pixelated.
@@ -2207,13 +2225,17 @@ local function draw_panel(cr, w, h, alpha)
     -- Centre the whole block rather than letting the remainder pool above the
     -- footer, which is what made a 1440px screen look bottom-heavy.
     local y = TOP + math.max(0, room - gap * gaps) / 2
-    local divide = false
+    local divide, previous = false, nil
     for i, section in ipairs(flow) do
         if section == DIVIDER then
             divide = true
         elseif measured[i] > 0 then
-            if divide then section_divider(cr, w, math.floor(y - gap / 2), alpha) end
-            divide = false
+            if divide and previous then
+                local above = y - gap - blank_below(previous)
+                local below = y - ink_above(section)
+                section_divider(cr, w, math.floor((above + below) / 2 - PIXEL / 2), alpha)
+            end
+            divide, previous = false, section
             section(cr, w, y, alpha)
             y = y + measured[i] + gap
         end
