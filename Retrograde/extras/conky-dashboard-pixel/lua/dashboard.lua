@@ -1715,9 +1715,7 @@ local function section_network(cr, w, y, alpha, measure)
     if not net or not net.name then return 0 end
     -- 124 not 108: the peaks sit on their own line under the readings.  Side
     -- by side they collided on a saturated link -- "934 MiB/s" and its own
-    -- peak label do not both fit in half the panel width -- and shrinking the
-    -- type to make them fit would hide the one figure that explains why the
-    -- two halves of the graph are not to the same scale.
+    -- peak label do not both fit in half the panel width.
     -- Spelled out rather than left as 124 so the type and the box it has to
     -- fit in cannot drift apart when font_scale moves.
     local H = fs(18) + NET_GRAPH_H + fs(26) + fs(16) + fs(6)
@@ -1732,36 +1730,32 @@ local function section_network(cr, w, y, alpha, measure)
     local half   = NET_GRAPH_H / 2
     local axis   = gy + half
 
-    -- Each half is scaled to its own peak.  A shared scale is more honest
-    -- about the ratio, but on any ordinary asymmetric link it flattens upload
-    -- into the axis and the bottom half stops saying anything; the two peak
-    -- figures below carry the magnitude instead.
+    -- Both halves to one scale, the larger peak, so their heights compare:
+    -- each to its own peak drew 31 MiB/s up as tall as 629 KiB/s down.  A
+    -- quiet upload stays close to the axis, which is what it is.
     local down_peak, up_peak = peak_of(net_history.down), peak_of(net_history.up)
+    local scale = math.max(down_peak, up_peak)
 
-    net_area(cr, net_history.down, gx, gy,   gw, half, down_peak, "accent", alpha, false)
-    net_area(cr, net_history.up,   gx, axis, gw, half, up_peak,   "text",   alpha, true)
+    net_area(cr, net_history.down, gx, gy,   gw, half, scale, "accent", alpha, false)
+    net_area(cr, net_history.up,   gx, axis, gw, half, scale, "text",   alpha, true)
 
     set_colour(cr, "track", alpha)
     cairo_rectangle(cr, gx, axis, gw, 1)
     cairo_fill(cr)
 
-    -- Current readings, each with the full-scale value of its own half.  The
-    -- peak is labelled rather than left as a bare figure: because the halves
-    -- are scaled independently, it is the only thing on screen that says the
-    -- two are not drawn to the same scale.  Without the word, an upload peak
-    -- of 135 KiB/s drawn as tall as a 5.1 MiB/s download reads as symmetry
-    -- rather than as a 39x magnification.
+    -- Current readings: the graph's newest point, the last second's average,
+    -- not this frame's 200ms rate, which ran above the peak printed under it.
     local row  = gy + NET_GRAPH_H + fs(26)
     local mid  = gx + gw / 2
+    local down_now = net_history.down[#net_history.down] or net.down
+    local up_now   = net_history.up[#net_history.up] or net.up
 
     as_type(arrow, cr, gx + 6, row - 4, 11, false, "accent", alpha)
-    text(cr, format_rate(net.down), gx + 18, row, { size = 13.5, alpha = alpha })
+    text(cr, format_rate(down_now), gx + 18, row, { size = 13.5, alpha = alpha })
     as_type(arrow, cr, mid + 6, row - 4, 11, true, "text", alpha)
-    text(cr, format_rate(net.up), mid + 18, row, { size = 13.5, alpha = alpha })
+    text(cr, format_rate(up_now), mid + 18, row, { size = 13.5, alpha = alpha })
 
-    -- Each half of the plot is drawn to its own peak, so these two are the
-    -- full-scale values -- the only thing on screen saying the halves are not
-    -- comparable by height.
+    -- The highest second in the graph, each way.
     local scale_row = row + fs(16)
     text(cr, "peak " .. format_rate(down_peak), gx + 18, scale_row,
          { size = 9.5, colour = "label", alpha = alpha * 0.8 })
